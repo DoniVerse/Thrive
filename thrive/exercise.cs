@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace thrive
 {
-    public partial class LoginForm : Form
+    public partial class exercise : Form
     {
-        public LoginForm()
+        public exercise()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButLog_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

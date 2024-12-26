@@ -47,7 +47,7 @@
             DashPnl.Location = new Point(215, -1);
             DashPnl.Margin = new Padding(5, 4, 5, 4);
             DashPnl.Name = "DashPnl";
-            DashPnl.Size = new Size(1238, 605);
+            DashPnl.Size = new Size(1238, 549);
             DashPnl.TabIndex = 0;
             DashPnl.Paint += DashPnl_Paint;
             // 
@@ -56,10 +56,10 @@
             PanelLbl.AutoSize = true;
             PanelLbl.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PanelLbl.ForeColor = Color.Transparent;
-            PanelLbl.Location = new Point(553, 34);
+            PanelLbl.Location = new Point(340, 10);
             PanelLbl.Margin = new Padding(5, 0, 5, 0);
             PanelLbl.Name = "PanelLbl";
-            PanelLbl.Size = new Size(97, 32);
+            PanelLbl.Size = new Size(146, 48);
             PanelLbl.TabIndex = 0;
             PanelLbl.Text = "Thrive";
             // 
@@ -71,7 +71,7 @@
             DashLbl.Location = new Point(30, 44);
             DashLbl.Margin = new Padding(5, 0, 5, 0);
             DashLbl.Name = "DashLbl";
-            DashLbl.Size = new Size(96, 18);
+            DashLbl.Size = new Size(140, 28);
             DashLbl.TabIndex = 0;
             DashLbl.Text = "Dashboard";
             // 
@@ -82,7 +82,7 @@
             MoodLbl.Location = new Point(30, 103);
             MoodLbl.Margin = new Padding(5, 0, 5, 0);
             MoodLbl.Name = "MoodLbl";
-            MoodLbl.Size = new Size(118, 18);
+            MoodLbl.Size = new Size(174, 28);
             MoodLbl.TabIndex = 2;
             MoodLbl.Text = "Mood Tracker";
             // 
@@ -93,7 +93,7 @@
             SchduleLbl.Location = new Point(30, 317);
             SchduleLbl.Margin = new Padding(5, 0, 5, 0);
             SchduleLbl.Name = "SchduleLbl";
-            SchduleLbl.Size = new Size(80, 18);
+            SchduleLbl.Size = new Size(117, 28);
             SchduleLbl.TabIndex = 3;
             SchduleLbl.Text = "Schduler";
             // 
@@ -104,7 +104,7 @@
             JourLbl.Location = new Point(30, 153);
             JourLbl.Margin = new Padding(5, 0, 5, 0);
             JourLbl.Name = "JourLbl";
-            JourLbl.Size = new Size(68, 18);
+            JourLbl.Size = new Size(100, 28);
             JourLbl.TabIndex = 4;
             JourLbl.Text = "Journal";
             // 
@@ -115,7 +115,7 @@
             SoundLbl.Location = new Point(30, 266);
             SoundLbl.Margin = new Padding(5, 0, 5, 0);
             SoundLbl.Name = "SoundLbl";
-            SoundLbl.Size = new Size(110, 18);
+            SoundLbl.Size = new Size(158, 28);
             SoundLbl.TabIndex = 5;
             SoundLbl.Text = "SoundScape";
             // 
@@ -126,7 +126,7 @@
             ExerLbl.Location = new Point(30, 209);
             ExerLbl.Margin = new Padding(5, 0, 5, 0);
             ExerLbl.Name = "ExerLbl";
-            ExerLbl.Size = new Size(77, 18);
+            ExerLbl.Size = new Size(114, 28);
             ExerLbl.TabIndex = 6;
             ExerLbl.Text = "Exercise";
             // 
@@ -136,13 +136,13 @@
             LogLbl.ForeColor = SystemColors.ActiveCaption;
             LogLbl.Location = new Point(51, 512);
             LogLbl.Name = "LogLbl";
-            LogLbl.Size = new Size(64, 18);
+            LogLbl.Size = new Size(91, 28);
             LogLbl.TabIndex = 1;
             LogLbl.Text = "Logout";
             // 
             // DashFr
             // 
-            AutoScaleDimensions = new SizeF(10F, 18F);
+            AutoScaleDimensions = new SizeF(15F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1245, 539);
             Controls.Add(LogLbl);
