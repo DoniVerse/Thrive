@@ -36,6 +36,8 @@
             CpwdLbl = new Label();
             txtBxPwd = new TextBox();
             txtBxCpwd = new TextBox();
+            EmailLbl = new Label();
+            EmailTxtBx = new TextBox();
             SuspendLayout();
             // 
             // SignLbl
@@ -51,18 +53,19 @@
             // 
             // txtBxUsr
             // 
-            txtBxUsr.BackColor = SystemColors.ButtonHighlight;
+            txtBxUsr.BackColor = SystemColors.ControlLight;
             txtBxUsr.Location = new Point(384, 107);
             txtBxUsr.Name = "txtBxUsr";
-            txtBxUsr.Size = new Size(202, 23);
+            txtBxUsr.Size = new Size(221, 23);
             txtBxUsr.TabIndex = 1;
             // 
             // ButSign
             // 
-            ButSign.BackColor = SystemColors.ButtonHighlight;
+            ButSign.BackColor = SystemColors.Highlight;
+            ButSign.FlatStyle = FlatStyle.Flat;
             ButSign.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ButSign.ForeColor = SystemColors.Highlight;
-            ButSign.Location = new Point(384, 275);
+            ButSign.ForeColor = Color.Transparent;
+            ButSign.Location = new Point(363, 344);
             ButSign.Name = "ButSign";
             ButSign.Size = new Size(75, 28);
             ButSign.TabIndex = 2;
@@ -85,7 +88,7 @@
             PwdLbl.AutoSize = true;
             PwdLbl.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PwdLbl.ForeColor = SystemColors.Highlight;
-            PwdLbl.Location = new Point(242, 158);
+            PwdLbl.Location = new Point(242, 212);
             PwdLbl.Name = "PwdLbl";
             PwdLbl.Size = new Size(80, 17);
             PwdLbl.TabIndex = 4;
@@ -96,7 +99,7 @@
             CpwdLbl.AutoSize = true;
             CpwdLbl.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CpwdLbl.ForeColor = SystemColors.Highlight;
-            CpwdLbl.Location = new Point(242, 210);
+            CpwdLbl.Location = new Point(242, 274);
             CpwdLbl.Name = "CpwdLbl";
             CpwdLbl.Size = new Size(146, 17);
             CpwdLbl.TabIndex = 5;
@@ -104,25 +107,46 @@
             // 
             // txtBxPwd
             // 
-            txtBxPwd.BackColor = SystemColors.ButtonHighlight;
-            txtBxPwd.Location = new Point(384, 158);
+            txtBxPwd.BackColor = SystemColors.ControlLight;
+            txtBxPwd.Location = new Point(384, 212);
             txtBxPwd.Name = "txtBxPwd";
-            txtBxPwd.Size = new Size(202, 23);
+            txtBxPwd.Size = new Size(221, 23);
             txtBxPwd.TabIndex = 6;
             // 
             // txtBxCpwd
             // 
-            txtBxCpwd.BackColor = SystemColors.ButtonHighlight;
-            txtBxCpwd.Location = new Point(404, 210);
+            txtBxCpwd.BackColor = SystemColors.ControlLight;
+            txtBxCpwd.Location = new Point(425, 268);
             txtBxCpwd.Name = "txtBxCpwd";
             txtBxCpwd.Size = new Size(221, 23);
             txtBxCpwd.TabIndex = 7;
+            // 
+            // EmailLbl
+            // 
+            EmailLbl.AutoSize = true;
+            EmailLbl.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            EmailLbl.ForeColor = SystemColors.Highlight;
+            EmailLbl.Location = new Point(247, 164);
+            EmailLbl.Name = "EmailLbl";
+            EmailLbl.Size = new Size(48, 17);
+            EmailLbl.TabIndex = 8;
+            EmailLbl.Text = "Email";
+            // 
+            // EmailTxtBx
+            // 
+            EmailTxtBx.BackColor = SystemColors.ControlLight;
+            EmailTxtBx.Location = new Point(384, 164);
+            EmailTxtBx.Name = "EmailTxtBx";
+            EmailTxtBx.Size = new Size(221, 23);
+            EmailTxtBx.TabIndex = 9;
             // 
             // RegForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(EmailTxtBx);
+            Controls.Add(EmailLbl);
             Controls.Add(txtBxCpwd);
             Controls.Add(txtBxPwd);
             Controls.Add(CpwdLbl);
@@ -131,6 +155,7 @@
             Controls.Add(ButSign);
             Controls.Add(txtBxUsr);
             Controls.Add(SignLbl);
+            ForeColor = Color.Transparent;
             MaximizeBox = false;
             Name = "RegForm";
             Text = "Registration Form";
@@ -149,5 +174,7 @@
         private Label CpwdLbl;
         private TextBox txtBxPwd;
         private TextBox txtBxCpwd;
+        private Label EmailLbl;
+        private TextBox EmailTxtBx;
     }
 }
