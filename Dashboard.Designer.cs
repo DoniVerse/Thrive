@@ -30,13 +30,12 @@
         {
             DashPnl = new Panel();
             PanelLbl = new Label();
-            DashLbl = new Label();
-            MoodLbl = new Label();
-            SchduleLbl = new Label();
-            JourLbl = new Label();
-            SoundLbl = new Label();
-            ExerLbl = new Label();
-            LogLbl = new Label();
+            moodlb = new LinkLabel();
+            Dashlb = new LinkLabel();
+            Journallb = new LinkLabel();
+            Excericselb = new LinkLabel();
+            soundlb = new LinkLabel();
+            logubtn = new Button();
             DashPnl.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,7 +46,7 @@
             DashPnl.Location = new Point(215, -1);
             DashPnl.Margin = new Padding(5, 4, 5, 4);
             DashPnl.Name = "DashPnl";
-            DashPnl.Size = new Size(1238, 549);
+            DashPnl.Size = new Size(1059, 953);
             DashPnl.TabIndex = 0;
             DashPnl.Paint += DashPnl_Paint;
             // 
@@ -63,95 +62,98 @@
             PanelLbl.TabIndex = 0;
             PanelLbl.Text = "Thrive";
             // 
-            // DashLbl
+            // moodlb
             // 
-            DashLbl.AutoSize = true;
-            DashLbl.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            DashLbl.ForeColor = SystemColors.ActiveCaption;
-            DashLbl.Location = new Point(30, 44);
-            DashLbl.Margin = new Padding(5, 0, 5, 0);
-            DashLbl.Name = "DashLbl";
-            DashLbl.Size = new Size(140, 28);
-            DashLbl.TabIndex = 0;
-            DashLbl.Text = "Dashboard";
+            moodlb.ActiveLinkColor = SystemColors.ActiveCaption;
+            moodlb.AutoSize = true;
+            moodlb.DisabledLinkColor = Color.WhiteSmoke;
+            moodlb.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            moodlb.LinkColor = SystemColors.ActiveCaption;
+            moodlb.Location = new Point(24, 93);
+            moodlb.Name = "moodlb";
+            moodlb.Size = new Size(160, 26);
+            moodlb.TabIndex = 7;
+            moodlb.TabStop = true;
+            moodlb.Text = "Mood Tracker";
+            moodlb.VisitedLinkColor = SystemColors.ActiveCaption;
             // 
-            // MoodLbl
+            // Dashlb
             // 
-            MoodLbl.AutoSize = true;
-            MoodLbl.ForeColor = SystemColors.ActiveCaption;
-            MoodLbl.Location = new Point(30, 103);
-            MoodLbl.Margin = new Padding(5, 0, 5, 0);
-            MoodLbl.Name = "MoodLbl";
-            MoodLbl.Size = new Size(174, 28);
-            MoodLbl.TabIndex = 2;
-            MoodLbl.Text = "Mood Tracker";
+            Dashlb.ActiveLinkColor = SystemColors.ActiveCaption;
+            Dashlb.AutoSize = true;
+            Dashlb.LinkColor = SystemColors.ActiveCaption;
+            Dashlb.Location = new Point(24, 39);
+            Dashlb.Name = "Dashlb";
+            Dashlb.Size = new Size(148, 28);
+            Dashlb.TabIndex = 8;
+            Dashlb.TabStop = true;
+            Dashlb.Text = "Dash Board";
+            Dashlb.VisitedLinkColor = SystemColors.ActiveCaption;
             // 
-            // SchduleLbl
+            // Journallb
             // 
-            SchduleLbl.AutoSize = true;
-            SchduleLbl.ForeColor = SystemColors.ActiveCaption;
-            SchduleLbl.Location = new Point(30, 317);
-            SchduleLbl.Margin = new Padding(5, 0, 5, 0);
-            SchduleLbl.Name = "SchduleLbl";
-            SchduleLbl.Size = new Size(117, 28);
-            SchduleLbl.TabIndex = 3;
-            SchduleLbl.Text = "Schduler";
+            Journallb.AutoSize = true;
+            Journallb.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Journallb.LinkColor = SystemColors.ActiveCaption;
+            Journallb.Location = new Point(30, 143);
+            Journallb.Name = "Journallb";
+            Journallb.Size = new Size(108, 32);
+            Journallb.TabIndex = 9;
+            Journallb.TabStop = true;
+            Journallb.Text = "Journal";
+            Journallb.VisitedLinkColor = SystemColors.ActiveCaption;
             // 
-            // JourLbl
+            // Excericselb
             // 
-            JourLbl.AutoSize = true;
-            JourLbl.ForeColor = SystemColors.ActiveCaption;
-            JourLbl.Location = new Point(30, 153);
-            JourLbl.Margin = new Padding(5, 0, 5, 0);
-            JourLbl.Name = "JourLbl";
-            JourLbl.Size = new Size(100, 28);
-            JourLbl.TabIndex = 4;
-            JourLbl.Text = "Journal";
+            Excericselb.ActiveLinkColor = SystemColors.ActiveCaption;
+            Excericselb.AutoSize = true;
+            Excericselb.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Excericselb.LinkColor = SystemColors.ActiveCaption;
+            Excericselb.Location = new Point(30, 201);
+            Excericselb.Name = "Excericselb";
+            Excericselb.Size = new Size(110, 33);
+            Excericselb.TabIndex = 10;
+            Excericselb.TabStop = true;
+            Excericselb.Text = "Exercise";
+            Excericselb.VisitedLinkColor = SystemColors.ActiveCaption;
             // 
-            // SoundLbl
+            // soundlb
             // 
-            SoundLbl.AutoSize = true;
-            SoundLbl.ForeColor = SystemColors.ActiveCaption;
-            SoundLbl.Location = new Point(30, 266);
-            SoundLbl.Margin = new Padding(5, 0, 5, 0);
-            SoundLbl.Name = "SoundLbl";
-            SoundLbl.Size = new Size(158, 28);
-            SoundLbl.TabIndex = 5;
-            SoundLbl.Text = "SoundScape";
+            soundlb.AutoSize = true;
+            soundlb.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            soundlb.LinkColor = SystemColors.ActiveCaption;
+            soundlb.Location = new Point(30, 270);
+            soundlb.Name = "soundlb";
+            soundlb.Size = new Size(155, 33);
+            soundlb.TabIndex = 11;
+            soundlb.TabStop = true;
+            soundlb.Text = "Sound Track";
+            soundlb.VisitedLinkColor = SystemColors.ActiveCaption;
             // 
-            // ExerLbl
+            // logubtn
             // 
-            ExerLbl.AutoSize = true;
-            ExerLbl.ForeColor = SystemColors.ActiveCaption;
-            ExerLbl.Location = new Point(30, 209);
-            ExerLbl.Margin = new Padding(5, 0, 5, 0);
-            ExerLbl.Name = "ExerLbl";
-            ExerLbl.Size = new Size(114, 28);
-            ExerLbl.TabIndex = 6;
-            ExerLbl.Text = "Exercise";
-            // 
-            // LogLbl
-            // 
-            LogLbl.AutoSize = true;
-            LogLbl.ForeColor = SystemColors.ActiveCaption;
-            LogLbl.Location = new Point(51, 512);
-            LogLbl.Name = "LogLbl";
-            LogLbl.Size = new Size(91, 28);
-            LogLbl.TabIndex = 1;
-            LogLbl.Text = "Logout";
+            logubtn.BackColor = SystemColors.Highlight;
+            logubtn.FlatStyle = FlatStyle.Flat;
+            logubtn.Font = new Font("Times New Roman", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            logubtn.ForeColor = Color.White;
+            logubtn.Location = new Point(39, 833);
+            logubtn.Name = "logubtn";
+            logubtn.Size = new Size(112, 34);
+            logubtn.TabIndex = 12;
+            logubtn.Text = "Log Out";
+            logubtn.UseVisualStyleBackColor = false;
             // 
             // DashFr
             // 
             AutoScaleDimensions = new SizeF(15F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1245, 539);
-            Controls.Add(LogLbl);
-            Controls.Add(ExerLbl);
-            Controls.Add(SoundLbl);
-            Controls.Add(JourLbl);
-            Controls.Add(SchduleLbl);
-            Controls.Add(MoodLbl);
-            Controls.Add(DashLbl);
+            ClientSize = new Size(1073, 897);
+            Controls.Add(logubtn);
+            Controls.Add(soundlb);
+            Controls.Add(Excericselb);
+            Controls.Add(Journallb);
+            Controls.Add(Dashlb);
+            Controls.Add(moodlb);
             Controls.Add(DashPnl);
             Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
             Margin = new Padding(5, 4, 5, 4);
@@ -168,11 +170,11 @@
         private Panel DashPnl;
         private Label PanelLbl;
         private Label DashLbl;
-        private Label MoodLbl;
-        private Label SchduleLbl;
-        private Label JourLbl;
-        private Label SoundLbl;
-        private Label ExerLbl;
-        private Label LogLbl;
+        private LinkLabel moodlb;
+        private LinkLabel Dashlb;
+        private LinkLabel Journallb;
+        private LinkLabel Excericselb;
+        private LinkLabel soundlb;
+        private Button logubtn;
     }
 }
