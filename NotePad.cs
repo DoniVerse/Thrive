@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace thrive
 {
-    public partial class Journal : Form
+    public partial class NotePad : Form
     {
-        public Journal()
+        public NotePad()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
