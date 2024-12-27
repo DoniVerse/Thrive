@@ -73,6 +73,16 @@ namespace thrive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap breath {
+            get {
+                object obj = ResourceManager.GetObject("breath", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cozy {
             get {
                 object obj = ResourceManager.GetObject("cozy", resourceCulture);
@@ -96,6 +106,16 @@ namespace thrive.Properties {
         internal static System.Drawing.Bitmap joy {
             get {
                 object obj = ResourceManager.GetObject("joy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap meditation {
+            get {
+                object obj = ResourceManager.GetObject("meditation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +173,16 @@ namespace thrive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pilates {
+            get {
+                object obj = ResourceManager.GetObject("pilates", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rainfall {
             get {
                 object obj = ResourceManager.GetObject("rainfall", resourceCulture);
@@ -163,9 +193,29 @@ namespace thrive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Tia {
+            get {
+                object obj = ResourceManager.GetObject("Tia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap white {
             get {
                 object obj = ResourceManager.GetObject("white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yoga {
+            get {
+                object obj = ResourceManager.GetObject("yoga", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
