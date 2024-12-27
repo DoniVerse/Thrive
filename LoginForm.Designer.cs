@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             LogLbl = new Label();
-            textBox1 = new TextBox();
+            PwdTxtBx = new TextBox();
             ButLog = new Button();
             PwdLbl = new Label();
             UsrLbl = new Label();
-            textBox2 = new TextBox();
+            UsrTxtBx = new TextBox();
             label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            HaveAccLbl = new Label();
+            SignLinkLbl = new LinkLabel();
             SuspendLayout();
             // 
             // LogLbl
@@ -45,22 +45,20 @@
             LogLbl.BackColor = Color.White;
             LogLbl.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LogLbl.ForeColor = SystemColors.Highlight;
-            LogLbl.Location = new Point(492, 43);
-            LogLbl.Margin = new Padding(4, 0, 4, 0);
+            LogLbl.Location = new Point(344, 26);
             LogLbl.Name = "LogLbl";
-            LogLbl.Size = new Size(95, 33);
+            LogLbl.Size = new Size(60, 22);
             LogLbl.TabIndex = 0;
             LogLbl.Text = "Login";
             // 
-            // textBox1
+            // PwdTxtBx
             // 
-            textBox1.BackColor = SystemColors.ControlLight;
-            textBox1.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(439, 252);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(291, 40);
-            textBox1.TabIndex = 1;
+            PwdTxtBx.BackColor = SystemColors.ControlLight;
+            PwdTxtBx.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PwdTxtBx.Location = new Point(307, 151);
+            PwdTxtBx.Name = "PwdTxtBx";
+            PwdTxtBx.Size = new Size(205, 29);
+            PwdTxtBx.TabIndex = 1;
             // 
             // ButLog
             // 
@@ -68,10 +66,9 @@
             ButLog.FlatStyle = FlatStyle.Flat;
             ButLog.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ButLog.ForeColor = Color.White;
-            ButLog.Location = new Point(480, 373);
-            ButLog.Margin = new Padding(4, 5, 4, 5);
+            ButLog.Location = new Point(336, 224);
             ButLog.Name = "ButLog";
-            ButLog.Size = new Size(107, 57);
+            ButLog.Size = new Size(75, 34);
             ButLog.TabIndex = 2;
             ButLog.Text = "Login";
             ButLog.UseVisualStyleBackColor = false;
@@ -82,10 +79,9 @@
             PwdLbl.AutoSize = true;
             PwdLbl.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PwdLbl.ForeColor = SystemColors.Highlight;
-            PwdLbl.Location = new Point(279, 252);
-            PwdLbl.Margin = new Padding(4, 0, 4, 0);
+            PwdLbl.Location = new Point(195, 151);
             PwdLbl.Name = "PwdLbl";
-            PwdLbl.Size = new Size(122, 27);
+            PwdLbl.Size = new Size(80, 17);
             PwdLbl.TabIndex = 3;
             PwdLbl.Text = "Password";
             PwdLbl.Click += label2_Click;
@@ -95,73 +91,73 @@
             UsrLbl.AutoSize = true;
             UsrLbl.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             UsrLbl.ForeColor = SystemColors.Highlight;
-            UsrLbl.Location = new Point(279, 167);
-            UsrLbl.Margin = new Padding(4, 0, 4, 0);
+            UsrLbl.Location = new Point(195, 100);
             UsrLbl.Name = "UsrLbl";
-            UsrLbl.Size = new Size(130, 27);
+            UsrLbl.Size = new Size(85, 17);
             UsrLbl.TabIndex = 4;
             UsrLbl.Text = "UserName";
             // 
-            // textBox2
+            // UsrTxtBx
             // 
-            textBox2.BackColor = SystemColors.ControlLight;
-            textBox2.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(439, 166);
-            textBox2.Margin = new Padding(4, 5, 4, 5);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(291, 40);
-            textBox2.TabIndex = 5;
+            UsrTxtBx.BackColor = SystemColors.ControlLight;
+            UsrTxtBx.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UsrTxtBx.Location = new Point(307, 100);
+            UsrTxtBx.Name = "UsrTxtBx";
+            UsrTxtBx.Size = new Size(205, 29);
+            UsrTxtBx.TabIndex = 5;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(404, 516);
+            label1.Location = new Point(283, 310);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(0, 27);
+            label1.Size = new Size(0, 19);
             label1.TabIndex = 6;
             // 
-            // label2
+            // HaveAccLbl
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.Highlight;
-            label2.Location = new Point(410, 510);
-            label2.Name = "label2";
-            label2.Size = new Size(282, 33);
-            label2.TabIndex = 7;
-            label2.Text = "Don't have an Account ?";
+            HaveAccLbl.AutoSize = true;
+            HaveAccLbl.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            HaveAccLbl.ForeColor = SystemColors.Highlight;
+            HaveAccLbl.Location = new Point(283, 310);
+            HaveAccLbl.Margin = new Padding(2, 0, 2, 0);
+            HaveAccLbl.Name = "HaveAccLbl";
+            HaveAccLbl.Size = new Size(193, 21);
+            HaveAccLbl.TabIndex = 7;
+            HaveAccLbl.Text = "Don't have an Account ?";
             // 
-            // label3
+            // SignLinkLbl
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.Highlight;
-            label3.Location = new Point(439, 583);
-            label3.Name = "label3";
-            label3.Size = new Size(197, 27);
-            label3.TabIndex = 8;
-            label3.Text = "Create An Account";
+            SignLinkLbl.AutoSize = true;
+            SignLinkLbl.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SignLinkLbl.LinkColor = SystemColors.Highlight;
+            SignLinkLbl.Location = new Point(485, 310);
+            SignLinkLbl.Name = "SignLinkLbl";
+            SignLinkLbl.Size = new Size(84, 16);
+            SignLinkLbl.TabIndex = 8;
+            SignLinkLbl.TabStop = true;
+            SignLinkLbl.Text = "Register here";
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1143, 750);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            ClientSize = new Size(800, 449);
+            Controls.Add(SignLinkLbl);
+            Controls.Add(HaveAccLbl);
             Controls.Add(label1);
-            Controls.Add(textBox2);
+            Controls.Add(UsrTxtBx);
             Controls.Add(UsrLbl);
             Controls.Add(PwdLbl);
             Controls.Add(ButLog);
-            Controls.Add(textBox1);
+            Controls.Add(PwdTxtBx);
             Controls.Add(LogLbl);
             Cursor = Cursors.Cross;
-            Margin = new Padding(4, 5, 4, 5);
             Name = "LoginForm";
-            Padding = new Padding(5, 6, 5, 5);
+            Padding = new Padding(4, 4, 4, 3);
             Text = "LoginForm";
             Load += LoginForm_Load;
             ResumeLayout(false);
@@ -171,13 +167,13 @@
         #endregion
 
         private Label LogLbl;
-        private TextBox textBox1;
+        private TextBox PwdTxtBx;
         private Button ButLog;
         private Label PwdLbl;
         private Label UsrLbl;
-        private TextBox textBox2;
+        private TextBox UsrTxtBx;
         private Label label1;
-        private Label label2;
-        private Label label3;
+        private Label HaveAccLbl;
+        private LinkLabel SignLinkLbl;
     }
 }
