@@ -28,12 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "MoodHistory";
+            MoodHisDataGrid = new DataGridView();
+            MoodHisBackBut = new Button();
+            ((System.ComponentModel.ISupportInitialize)MoodHisDataGrid).BeginInit();
+            SuspendLayout();
+            // 
+            // MoodHisDataGrid
+            // 
+            MoodHisDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            MoodHisDataGrid.Dock = DockStyle.Top;
+            MoodHisDataGrid.Location = new Point(0, 0);
+            MoodHisDataGrid.Name = "MoodHisDataGrid";
+            MoodHisDataGrid.Size = new Size(800, 415);
+            MoodHisDataGrid.TabIndex = 0;
+            // 
+            // MoodHisBackBut
+            // 
+            MoodHisBackBut.BackColor = SystemColors.Highlight;
+            MoodHisBackBut.FlatStyle = FlatStyle.Flat;
+            MoodHisBackBut.ForeColor = Color.Transparent;
+            MoodHisBackBut.Location = new Point(29, 425);
+            MoodHisBackBut.Name = "MoodHisBackBut";
+            MoodHisBackBut.Size = new Size(75, 23);
+            MoodHisBackBut.TabIndex = 1;
+            MoodHisBackBut.Text = "Back";
+            MoodHisBackBut.UseVisualStyleBackColor = false;
+            // 
+            // MoodHistory
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(800, 450);
+            Controls.Add(MoodHisBackBut);
+            Controls.Add(MoodHisDataGrid);
+            Name = "MoodHistory";
+            Text = "MoodHistory";
+            ((System.ComponentModel.ISupportInitialize)MoodHisDataGrid).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView MoodHisDataGrid;
+        private Button MoodHisBackBut;
     }
 }

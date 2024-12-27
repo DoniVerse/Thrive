@@ -46,6 +46,7 @@
             // WatchFrBut
             // 
             WatchFrBut.BackColor = SystemColors.Highlight;
+            WatchFrBut.FlatStyle = FlatStyle.Flat;
             WatchFrBut.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             WatchFrBut.ForeColor = Color.Transparent;
             WatchFrBut.Location = new Point(21, 26);

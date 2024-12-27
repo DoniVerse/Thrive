@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             AddBut = new Button();
             JournalDtaGrid = new DataGridView();
             DelBut = new Button();
@@ -38,6 +38,7 @@
             // AddBut
             // 
             AddBut.BackColor = SystemColors.Highlight;
+            AddBut.FlatStyle = FlatStyle.Flat;
             AddBut.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddBut.ForeColor = Color.Transparent;
             AddBut.Location = new Point(42, 78);
@@ -49,8 +50,8 @@
             // 
             // JournalDtaGrid
             // 
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 192, 192);
-            JournalDtaGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 192, 192);
+            JournalDtaGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             JournalDtaGrid.BackgroundColor = Color.WhiteSmoke;
             JournalDtaGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             JournalDtaGrid.Location = new Point(197, 1);
@@ -62,6 +63,7 @@
             // DelBut
             // 
             DelBut.BackColor = SystemColors.Highlight;
+            DelBut.FlatStyle = FlatStyle.Flat;
             DelBut.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DelBut.ForeColor = Color.Transparent;
             DelBut.Location = new Point(42, 178);

@@ -46,6 +46,7 @@
             // SaveBut
             // 
             SaveBut.BackColor = SystemColors.Highlight;
+            SaveBut.FlatStyle = FlatStyle.Flat;
             SaveBut.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SaveBut.ForeColor = Color.Transparent;
             SaveBut.Location = new Point(102, 386);
@@ -58,6 +59,7 @@
             // BackJourBut
             // 
             BackJourBut.BackColor = SystemColors.Highlight;
+            BackJourBut.FlatStyle = FlatStyle.Flat;
             BackJourBut.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BackJourBut.ForeColor = Color.Transparent;
             BackJourBut.Location = new Point(275, 386);
