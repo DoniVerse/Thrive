@@ -30,6 +30,7 @@
         {
             NoteTxtBx = new TextBox();
             SaveBut = new Button();
+            BackJourBut = new Button();
             SuspendLayout();
             // 
             // NoteTxtBx
@@ -54,12 +55,25 @@
             SaveBut.Text = "Save";
             SaveBut.UseVisualStyleBackColor = false;
             // 
+            // BackJourBut
+            // 
+            BackJourBut.BackColor = SystemColors.Highlight;
+            BackJourBut.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BackJourBut.ForeColor = Color.Transparent;
+            BackJourBut.Location = new Point(275, 386);
+            BackJourBut.Name = "BackJourBut";
+            BackJourBut.Size = new Size(132, 40);
+            BackJourBut.TabIndex = 2;
+            BackJourBut.Text = "Back to Journal";
+            BackJourBut.UseVisualStyleBackColor = false;
+            // 
             // NotePad
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
+            Controls.Add(BackJourBut);
             Controls.Add(SaveBut);
             Controls.Add(NoteTxtBx);
             Name = "NotePad";
@@ -72,5 +86,6 @@
 
         private TextBox NoteTxtBx;
         private Button SaveBut;
+        private Button BackJourBut;
     }
 }
