@@ -28,12 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "NotePad";
+            NoteTxtBx = new TextBox();
+            SaveBut = new Button();
+            SuspendLayout();
+            // 
+            // NoteTxtBx
+            // 
+            NoteTxtBx.Dock = DockStyle.Top;
+            NoteTxtBx.Location = new Point(0, 0);
+            NoteTxtBx.Multiline = true;
+            NoteTxtBx.Name = "NoteTxtBx";
+            NoteTxtBx.PlaceholderText = "My Journal";
+            NoteTxtBx.Size = new Size(800, 368);
+            NoteTxtBx.TabIndex = 0;
+            // 
+            // SaveBut
+            // 
+            SaveBut.BackColor = SystemColors.Highlight;
+            SaveBut.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SaveBut.ForeColor = Color.Transparent;
+            SaveBut.Location = new Point(102, 386);
+            SaveBut.Name = "SaveBut";
+            SaveBut.Size = new Size(75, 40);
+            SaveBut.TabIndex = 1;
+            SaveBut.Text = "Save";
+            SaveBut.UseVisualStyleBackColor = false;
+            // 
+            // NotePad
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(800, 450);
+            Controls.Add(SaveBut);
+            Controls.Add(NoteTxtBx);
+            Name = "NotePad";
+            Text = "NotePad";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox NoteTxtBx;
+        private Button SaveBut;
     }
 }
