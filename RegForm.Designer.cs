@@ -2,6 +2,7 @@
 {
     partial class RegForm
     {
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -71,6 +72,7 @@
             ButSign.TabIndex = 2;
             ButSign.Text = "Signup";
             ButSign.UseVisualStyleBackColor = false;
+            ButSign.Click += ButSign_Click;
             // 
             // UsrLbl
             // 

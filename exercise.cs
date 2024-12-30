@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace thrive
 {
-    public partial class exercise : Form
+    public partial class Exercise : Form
     {
-        public exercise()
+        public Exercise()
         {
             InitializeComponent();
         }

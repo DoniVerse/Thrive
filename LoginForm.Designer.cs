@@ -2,6 +2,9 @@
 {
     partial class LoginForm
     {
+        private readonly DBConnection db;
+
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>

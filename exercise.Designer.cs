@@ -1,6 +1,6 @@
 ﻿namespace thrive
 {
-    partial class exercise
+    partial class Exercise
     {
         /// <summary>
         /// Required designer variable.
@@ -230,7 +230,7 @@
             TaiBut.Text = "Watch now";
             TaiBut.UseVisualStyleBackColor = false;
             // 
-            // exercise
+            // Exercise
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -251,8 +251,8 @@
             Controls.Add(TaiPicBx);
             Controls.Add(YogaPicBx);
             Controls.Add(exlable);
-            Margin = new Padding(2, 2, 2, 2);
-            Name = "exercise";
+            Margin = new Padding(2);
+            Name = "Exercise";
             Text = "exercise";
             ((System.ComponentModel.ISupportInitialize)YogaPicBx).EndInit();
             ((System.ComponentModel.ISupportInitialize)TaiPicBx).EndInit();

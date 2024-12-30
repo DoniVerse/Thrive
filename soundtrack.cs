@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace thrive
 {
-    public partial class soundtrack : Form
+    public partial class SoundTrack : Form
     {
-        public soundtrack()
+        public SoundTrack()
         {
             InitializeComponent();
+        }
+
+        private void SoundTrack_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

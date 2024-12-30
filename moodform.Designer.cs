@@ -32,6 +32,7 @@
             MoodLbl = new Label();
             FeelLbl = new Label();
             MoodPnl = new Panel();
+            MoodHisBut = new Button();
             HistoryLbl = new Label();
             MoodDate = new DateTimePicker();
             LogMoodBut = new Button();
@@ -48,7 +49,6 @@
             AngerPicBx = new PictureBox();
             disgustPicBx = new PictureBox();
             SelectLbl = new Label();
-            MoodHisBut = new Button();
             MoodPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)JoyPicBx).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SadPicBx).BeginInit();
@@ -105,6 +105,20 @@
             MoodPnl.Name = "MoodPnl";
             MoodPnl.Size = new Size(740, 403);
             MoodPnl.TabIndex = 2;
+            // 
+            // MoodHisBut
+            // 
+            MoodHisBut.BackColor = SystemColors.Highlight;
+            MoodHisBut.FlatStyle = FlatStyle.Flat;
+            MoodHisBut.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MoodHisBut.ForeColor = Color.Transparent;
+            MoodHisBut.Location = new Point(408, 338);
+            MoodHisBut.Name = "MoodHisBut";
+            MoodHisBut.RightToLeft = RightToLeft.No;
+            MoodHisBut.Size = new Size(124, 28);
+            MoodHisBut.TabIndex = 16;
+            MoodHisBut.Text = "Mood History";
+            MoodHisBut.UseVisualStyleBackColor = false;
             // 
             // HistoryLbl
             // 
@@ -281,28 +295,15 @@
             SelectLbl.TabIndex = 0;
             SelectLbl.Text = "Select your mood";
             // 
-            // MoodHisBut
-            // 
-            MoodHisBut.BackColor = SystemColors.Highlight;
-            MoodHisBut.FlatStyle = FlatStyle.Flat;
-            MoodHisBut.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            MoodHisBut.ForeColor = Color.Transparent;
-            MoodHisBut.Location = new Point(408, 338);
-            MoodHisBut.Name = "MoodHisBut";
-            MoodHisBut.RightToLeft = RightToLeft.No;
-            MoodHisBut.Size = new Size(124, 28);
-            MoodHisBut.TabIndex = 16;
-            MoodHisBut.Text = "Mood History";
-            MoodHisBut.UseVisualStyleBackColor = false;
-            // 
             // MoodForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(851, 465);
+            ClientSize = new Size(1043, 617);
             Controls.Add(MoodPnl);
             Controls.Add(MoodLbl);
+            Location = new Point(215, -1);
             Name = "MoodForm";
             Text = "MoodForm";
             MoodPnl.ResumeLayout(false);
