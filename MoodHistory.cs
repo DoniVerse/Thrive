@@ -12,18 +12,25 @@ namespace thrive
 {
     public partial class MoodHistory : Form
     {
-        private int userId;
+        MoodTracker mT = new MoodTracker();
+        private int userIdentifier;
         public MoodHistory()
         {
             InitializeComponent();
-            this.userId = userId;
+            this.userIdentifier = mT.UserId;
             LoadMoodHistory();
         }
+        //private void InitializeListView()
+        //{
+        //    MoodListView.View = View.Details;
+        //    MoodListView.Columns.Add("Date", 100);
+        //    MoodListView.Columns.Add("Mood(s)", 200);
+        //}
         private void LoadMoodHistory()
         {
             // Retrieve mood history
-            MoodTracker mT = new MoodTracker();
-            List<MoodTracker> moodHistory = mT.GetMoodHistory(userId);
+         
+            List<MoodTracker> moodHistory = mT.GetMoodHistory(mT.UserId);
 
             // Display in a list view or grid view
             foreach (var mood in moodHistory)
@@ -31,6 +38,7 @@ namespace thrive
                 ListViewItem item = new ListViewItem(mood.Date.ToString("yyyy-MM-dd"));
                 item.SubItems.Add(mood.MoodScore);
                 MoodListView.Items.Add(item);
+                
             }
         }
 

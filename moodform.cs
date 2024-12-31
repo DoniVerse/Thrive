@@ -26,7 +26,7 @@ namespace thrive
             if (JoyCheckBx.Checked) selectedMoods.Add("Anger");
             if (FearCheckBx.Checked) selectedMoods.Add("Fear");
             if (AnxiCheckBx.Checked) selectedMoods.Add("Anxiety");
-            if (DisCheckBx.Checked) selectedMoods.Add("Disgust");
+            if (DisCheckBx.Checked) selectedMoods.Add("Disgusted");
 
             if (selectedMoods.Count == 0)
             {
