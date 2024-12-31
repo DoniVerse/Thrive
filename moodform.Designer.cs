@@ -119,6 +119,7 @@
             MoodHisBut.TabIndex = 16;
             MoodHisBut.Text = "Mood History";
             MoodHisBut.UseVisualStyleBackColor = false;
+            MoodHisBut.Click += MoodHisBut_Click;
             // 
             // HistoryLbl
             // 
@@ -151,6 +152,7 @@
             LogMoodBut.TabIndex = 13;
             LogMoodBut.Text = "Log Mood";
             LogMoodBut.UseVisualStyleBackColor = false;
+            LogMoodBut.Click += LogMoodBut_Click;
             // 
             // JoyCheckBx
             // 
@@ -187,6 +189,7 @@
             AnxiCheckBx.TabIndex = 10;
             AnxiCheckBx.Text = "Anxiety";
             AnxiCheckBx.UseVisualStyleBackColor = true;
+            AnxiCheckBx.CheckedChanged += AnxiCheckBx_CheckedChanged;
             // 
             // FearCheckBx
             // 

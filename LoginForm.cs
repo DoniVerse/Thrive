@@ -14,7 +14,7 @@ namespace thrive
     {
         public LoginForm()
         {
-           
+
             InitializeComponent();
             db = new DBConnection();
         }
@@ -31,6 +31,15 @@ namespace thrive
 
         private void ButLog_Click(object sender, EventArgs e)
         {
+
+            User usr = new User();
+            string username = UsrTxtBx.Text.Trim();
+            string email = EmailTxtBx.Text.Trim();
+            string password = PwdTxtBx.Text.Trim();
+
+            usr.login(username, email, password);
+            DashFr dashboard = new DashFr(); // Open dashboard form
+            dashboard.Show();
             //RegForm reg= new RegForm();
             //reg.Show();
             //string v = db.TestConnection();
@@ -62,6 +71,13 @@ namespace thrive
             //{
             //    MessageBox.Show($"Error during login: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //}
+        }
+
+        private void SignLinkLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegForm rg = new RegForm();
+           rg.Show();
+          
         }
     }
 }

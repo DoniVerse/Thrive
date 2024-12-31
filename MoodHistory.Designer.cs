@@ -28,19 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            MoodHisDataGrid = new DataGridView();
             MoodHisBackBut = new Button();
-            ((System.ComponentModel.ISupportInitialize)MoodHisDataGrid).BeginInit();
+            MoodListView = new ListView();
             SuspendLayout();
-            // 
-            // MoodHisDataGrid
-            // 
-            MoodHisDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            MoodHisDataGrid.Dock = DockStyle.Top;
-            MoodHisDataGrid.Location = new Point(0, 0);
-            MoodHisDataGrid.Name = "MoodHisDataGrid";
-            MoodHisDataGrid.Size = new Size(800, 415);
-            MoodHisDataGrid.TabIndex = 0;
             // 
             // MoodHisBackBut
             // 
@@ -54,23 +44,29 @@
             MoodHisBackBut.Text = "Back";
             MoodHisBackBut.UseVisualStyleBackColor = false;
             // 
+            // MoodListView
+            // 
+            MoodListView.Location = new Point(12, 12);
+            MoodListView.Name = "MoodListView";
+            MoodListView.Size = new Size(776, 389);
+            MoodListView.TabIndex = 2;
+            MoodListView.UseCompatibleStateImageBehavior = false;
+            // 
             // MoodHistory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
+            Controls.Add(MoodListView);
             Controls.Add(MoodHisBackBut);
-            Controls.Add(MoodHisDataGrid);
             Name = "MoodHistory";
             Text = "MoodHistory";
-            ((System.ComponentModel.ISupportInitialize)MoodHisDataGrid).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private DataGridView MoodHisDataGrid;
         private Button MoodHisBackBut;
+        private ListView MoodListView;
     }
 }

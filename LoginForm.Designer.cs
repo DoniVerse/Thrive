@@ -40,6 +40,8 @@
             label1 = new Label();
             HaveAccLbl = new Label();
             SignLinkLbl = new LinkLabel();
+            EmailLbl = new Label();
+            EmailTxtBx = new TextBox();
             SuspendLayout();
             // 
             // LogLbl
@@ -58,7 +60,7 @@
             // 
             PwdTxtBx.BackColor = SystemColors.ControlLight;
             PwdTxtBx.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PwdTxtBx.Location = new Point(307, 151);
+            PwdTxtBx.Location = new Point(307, 204);
             PwdTxtBx.Name = "PwdTxtBx";
             PwdTxtBx.Size = new Size(205, 29);
             PwdTxtBx.TabIndex = 1;
@@ -69,7 +71,7 @@
             ButLog.FlatStyle = FlatStyle.Flat;
             ButLog.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ButLog.ForeColor = Color.White;
-            ButLog.Location = new Point(336, 224);
+            ButLog.Location = new Point(344, 258);
             ButLog.Name = "ButLog";
             ButLog.Size = new Size(75, 34);
             ButLog.TabIndex = 2;
@@ -82,7 +84,7 @@
             PwdLbl.AutoSize = true;
             PwdLbl.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PwdLbl.ForeColor = SystemColors.Highlight;
-            PwdLbl.Location = new Point(195, 151);
+            PwdLbl.Location = new Point(200, 216);
             PwdLbl.Name = "PwdLbl";
             PwdLbl.Size = new Size(80, 17);
             PwdLbl.TabIndex = 3;
@@ -124,7 +126,7 @@
             HaveAccLbl.AutoSize = true;
             HaveAccLbl.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             HaveAccLbl.ForeColor = SystemColors.Highlight;
-            HaveAccLbl.Location = new Point(283, 310);
+            HaveAccLbl.Location = new Point(283, 329);
             HaveAccLbl.Margin = new Padding(2, 0, 2, 0);
             HaveAccLbl.Name = "HaveAccLbl";
             HaveAccLbl.Size = new Size(193, 21);
@@ -136,12 +138,33 @@
             SignLinkLbl.AutoSize = true;
             SignLinkLbl.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SignLinkLbl.LinkColor = SystemColors.Highlight;
-            SignLinkLbl.Location = new Point(485, 310);
+            SignLinkLbl.Location = new Point(481, 329);
             SignLinkLbl.Name = "SignLinkLbl";
             SignLinkLbl.Size = new Size(84, 16);
             SignLinkLbl.TabIndex = 8;
             SignLinkLbl.TabStop = true;
             SignLinkLbl.Text = "Register here";
+            SignLinkLbl.LinkClicked += SignLinkLbl_LinkClicked;
+            // 
+            // EmailLbl
+            // 
+            EmailLbl.AutoSize = true;
+            EmailLbl.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            EmailLbl.ForeColor = SystemColors.Highlight;
+            EmailLbl.Location = new Point(195, 156);
+            EmailLbl.Name = "EmailLbl";
+            EmailLbl.Size = new Size(48, 17);
+            EmailLbl.TabIndex = 9;
+            EmailLbl.Text = "Email";
+            // 
+            // EmailTxtBx
+            // 
+            EmailTxtBx.BackColor = SystemColors.ControlLight;
+            EmailTxtBx.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            EmailTxtBx.Location = new Point(307, 151);
+            EmailTxtBx.Name = "EmailTxtBx";
+            EmailTxtBx.Size = new Size(205, 29);
+            EmailTxtBx.TabIndex = 10;
             // 
             // LoginForm
             // 
@@ -149,6 +172,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(800, 449);
+            Controls.Add(EmailTxtBx);
+            Controls.Add(EmailLbl);
             Controls.Add(SignLinkLbl);
             Controls.Add(HaveAccLbl);
             Controls.Add(label1);
@@ -178,5 +203,7 @@
         private Label label1;
         private Label HaveAccLbl;
         private LinkLabel SignLinkLbl;
+        private Label EmailLbl;
+        private TextBox EmailTxtBx;
     }
 }

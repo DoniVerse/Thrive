@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using BCrypt.Net;
+using MySql.Data.MySqlClient;
 using Microsoft.VisualBasic.ApplicationServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -21,7 +22,7 @@ namespace thrive
         public RegForm()
         {
             InitializeComponent();
-            
+            //this.FormClosed += RegForm_FormClosing;
         }
 
         private void RegForm_Load(object sender, EventArgs e)
@@ -56,6 +57,7 @@ namespace thrive
                 User usr = new User
                 {
                     UserName = username,
+
                     Email = email,
                     Password = password
                 };
@@ -64,9 +66,9 @@ namespace thrive
                 if (usr.Register())
                 {
                     MessageBox.Show("Registered successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Redirect to login form
                     this.Close();
+                    
+                  
                     LoginForm lgFr = new LoginForm();
                     lgFr.Show();
                 }
@@ -79,7 +81,16 @@ namespace thrive
             {
                 MessageBox.Show($"Error during registration: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+           
         }
+        //private void RegForm_FormClosing(object? sender, FormClosingEventArgs e)
+        //{
+        //    if (this.DialogResult != DialogResult.Cancel) // Prevent redirection on unexpected closure
+        //    {
+        //        LoginForm lgfr = new LoginForm();
+        //        lgfr.Show();
+        //    }
+        //}
     }
 }
     
