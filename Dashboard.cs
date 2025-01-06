@@ -33,9 +33,9 @@ namespace thrive
 
         private void Journallb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Journal jr= new Journal();
-            jr.Show();
-            this.Hide();
+            NotePad note= new NotePad();
+            note.Show();
+            this.Close();
            
         }
     }

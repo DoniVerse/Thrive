@@ -30,16 +30,7 @@ namespace thrive
         {
             // Retrieve mood history
          
-            List<MoodTracker> moodHistory = mT.GetMoodHistory(mT.UserId);
-
-            // Display in a list view or grid view
-            foreach (var mood in moodHistory)
-            {
-                ListViewItem item = new ListViewItem(mood.Date.ToString("yyyy-MM-dd"));
-                item.SubItems.Add(mood.MoodScore);
-                MoodListView.Items.Add(item);
-                
-            }
+          
         }
 
         private void MoodHisDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)

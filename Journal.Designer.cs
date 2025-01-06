@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             AddBut = new Button();
             JournalDtaGrid = new DataGridView();
             DelBut = new Button();
@@ -47,11 +47,12 @@
             AddBut.TabIndex = 0;
             AddBut.Text = "Add";
             AddBut.UseVisualStyleBackColor = false;
+            AddBut.Click += AddBut_Click;
             // 
             // JournalDtaGrid
             // 
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 192, 192);
-            JournalDtaGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 192, 192);
+            JournalDtaGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             JournalDtaGrid.BackgroundColor = Color.WhiteSmoke;
             JournalDtaGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             JournalDtaGrid.Location = new Point(197, 1);
@@ -72,6 +73,7 @@
             DelBut.TabIndex = 2;
             DelBut.Text = "Delete";
             DelBut.UseVisualStyleBackColor = false;
+            DelBut.Click += DelBut_Click;
             // 
             // Journal
             // 

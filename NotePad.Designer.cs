@@ -42,6 +42,7 @@
             NoteTxtBx.PlaceholderText = "My Journal";
             NoteTxtBx.Size = new Size(800, 368);
             NoteTxtBx.TabIndex = 0;
+            NoteTxtBx.TextChanged += NoteTxtBx_TextChanged;
             // 
             // SaveBut
             // 
@@ -55,6 +56,7 @@
             SaveBut.TabIndex = 1;
             SaveBut.Text = "Save";
             SaveBut.UseVisualStyleBackColor = false;
+            SaveBut.Click += SaveBut_Click;
             // 
             // BackJourBut
             // 
@@ -68,6 +70,7 @@
             BackJourBut.TabIndex = 2;
             BackJourBut.Text = "Back to Journal";
             BackJourBut.UseVisualStyleBackColor = false;
+            BackJourBut.Click += BackJourBut_Click;
             // 
             // NotePad
             // 

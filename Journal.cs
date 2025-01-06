@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,35 @@ namespace thrive
 {
     public partial class Journal : Form
     {
-        public Journal()
+        //private int currentUserId;
+        //public Journal(int UserId)
+        //{
+        //    InitializeComponent();
+        //    currentUserId = UserId;
+        //    LoadEntries();
+        //}
+        private void LoadEntries()
         {
-            InitializeComponent();
+            //ClassJournal journal = new ClassJournal();
+            //List<Journal> entries = journal.ViewEntries(currentUserId);
+
+            // Clear the list view before populating
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void AddBut_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void DelBut_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
