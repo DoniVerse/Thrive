@@ -118,7 +118,7 @@
             Excericselb.TabStop = true;
             Excericselb.Text = "Exercise";
             Excericselb.VisitedLinkColor = SystemColors.ActiveCaption;
-            Excericselb.LinkClicked += Excericselb_LinkClicked;
+           Excericselb.LinkClicked += Excericselb_LinkClicked;
             // 
             // soundlb
             // 
