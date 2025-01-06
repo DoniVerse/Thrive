@@ -55,60 +55,54 @@
             Soundtlable.AutoSize = true;
             Soundtlable.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Soundtlable.ForeColor = SystemColors.ControlDarkDark;
-            Soundtlable.Location = new Point(124, 24);
-            Soundtlable.Margin = new Padding(2, 0, 2, 0);
+            Soundtlable.Location = new Point(177, 40);
             Soundtlable.Name = "Soundtlable";
-            Soundtlable.Size = new Size(190, 36);
+            Soundtlable.Size = new Size(286, 55);
             Soundtlable.TabIndex = 0;
             Soundtlable.Text = "Sound Track";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(314, 92);
-            pictureBox2.Margin = new Padding(2);
+            pictureBox2.Location = new Point(449, 153);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(134, 170);
+            pictureBox2.Size = new Size(191, 283);
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(522, 92);
-            pictureBox3.Margin = new Padding(2);
+            pictureBox3.Location = new Point(746, 153);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(134, 170);
+            pictureBox3.Size = new Size(191, 283);
             pictureBox3.TabIndex = 3;
             pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(81, 325);
-            pictureBox4.Margin = new Padding(2);
+            pictureBox4.Location = new Point(116, 542);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(134, 170);
+            pictureBox4.Size = new Size(191, 283);
             pictureBox4.TabIndex = 4;
             pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.Nf1;
-            pictureBox5.Location = new Point(314, 325);
-            pictureBox5.Margin = new Padding(2);
+            pictureBox5.Location = new Point(449, 542);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(134, 170);
+            pictureBox5.Size = new Size(191, 283);
             pictureBox5.TabIndex = 5;
             pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(522, 325);
-            pictureBox6.Margin = new Padding(2);
+            pictureBox6.Location = new Point(746, 542);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(134, 170);
+            pictureBox6.Size = new Size(191, 283);
             pictureBox6.TabIndex = 6;
             pictureBox6.TabStop = false;
             // 
@@ -116,21 +110,20 @@
             // 
             rainlabel.AutoSize = true;
             rainlabel.Font = new Font("Times New Roman", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            rainlabel.Location = new Point(106, 291);
-            rainlabel.Margin = new Padding(2, 0, 2, 0);
+            rainlabel.Location = new Point(151, 485);
             rainlabel.Name = "rainlabel";
-            rainlabel.Size = new Size(61, 17);
+            rainlabel.Size = new Size(92, 25);
             rainlabel.TabIndex = 7;
             rainlabel.Text = "Rain fall";
+            rainlabel.Click += rainlabel_Click;
             // 
             // naturelabel
             // 
             naturelabel.AutoSize = true;
             naturelabel.Font = new Font("Times New Roman", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            naturelabel.Location = new Point(352, 291);
-            naturelabel.Margin = new Padding(2, 0, 2, 0);
+            naturelabel.Location = new Point(503, 485);
             naturelabel.Name = "naturelabel";
-            naturelabel.Size = new Size(53, 17);
+            naturelabel.Size = new Size(77, 25);
             naturelabel.TabIndex = 8;
             naturelabel.Text = "Nature";
             // 
@@ -138,10 +131,9 @@
             // 
             Deathlabel.AutoSize = true;
             Deathlabel.Font = new Font("Times New Roman", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Deathlabel.Location = new Point(537, 291);
-            Deathlabel.Margin = new Padding(2, 0, 2, 0);
+            Deathlabel.Location = new Point(767, 485);
             Deathlabel.Name = "Deathlabel";
-            Deathlabel.Size = new Size(108, 17);
+            Deathlabel.Size = new Size(157, 25);
             Deathlabel.TabIndex = 9;
             Deathlabel.Text = "DEATH NOTE";
             // 
@@ -149,10 +141,9 @@
             // 
             whitelabel.AutoSize = true;
             whitelabel.Font = new Font("Times New Roman", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            whitelabel.Location = new Point(106, 509);
-            whitelabel.Margin = new Padding(2, 0, 2, 0);
+            whitelabel.Location = new Point(151, 848);
             whitelabel.Name = "whitelabel";
-            whitelabel.Size = new Size(89, 17);
+            whitelabel.Size = new Size(127, 25);
             whitelabel.TabIndex = 10;
             whitelabel.Text = "White Noise";
             // 
@@ -160,10 +151,9 @@
             // 
             NFlabel.AutoSize = true;
             NFlabel.Font = new Font("Times New Roman", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NFlabel.Location = new Point(360, 509);
-            NFlabel.Margin = new Padding(2, 0, 2, 0);
+            NFlabel.Location = new Point(514, 848);
             NFlabel.Name = "NFlabel";
-            NFlabel.Size = new Size(28, 17);
+            NFlabel.Size = new Size(42, 25);
             NFlabel.TabIndex = 11;
             NFlabel.Text = "NF";
             // 
@@ -171,29 +161,27 @@
             // 
             Cozylabel.AutoSize = true;
             Cozylabel.Font = new Font("Times New Roman", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Cozylabel.Location = new Point(555, 509);
-            Cozylabel.Margin = new Padding(2, 0, 2, 0);
+            Cozylabel.Location = new Point(793, 848);
             Cozylabel.Name = "Cozylabel";
-            Cozylabel.Size = new Size(80, 17);
+            Cozylabel.Size = new Size(116, 25);
             Cozylabel.TabIndex = 12;
             Cozylabel.Text = "Cozy Night";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.rainfall;
-            pictureBox1.Location = new Point(81, 92);
-            pictureBox1.Margin = new Padding(2);
+            pictureBox1.Location = new Point(116, 153);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(134, 170);
+            pictureBox1.Size = new Size(191, 283);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // SoundTrack
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(862, 566);
+            ClientSize = new Size(1231, 943);
             Controls.Add(Cozylabel);
             Controls.Add(NFlabel);
             Controls.Add(whitelabel);
@@ -207,7 +195,6 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(Soundtlable);
-            Margin = new Padding(2);
             Name = "SoundTrack";
             Text = "soundtrack";
             Load += SoundTrack_Load;

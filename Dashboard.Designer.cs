@@ -58,7 +58,7 @@
             PanelLbl.Location = new Point(340, 10);
             PanelLbl.Margin = new Padding(5, 0, 5, 0);
             PanelLbl.Name = "PanelLbl";
-            PanelLbl.Size = new Size(97, 32);
+            PanelLbl.Size = new Size(146, 48);
             PanelLbl.TabIndex = 0;
             PanelLbl.Text = "Thrive";
             // 
@@ -71,7 +71,7 @@
             moodlb.LinkColor = SystemColors.ActiveCaption;
             moodlb.Location = new Point(24, 93);
             moodlb.Name = "moodlb";
-            moodlb.Size = new Size(106, 19);
+            moodlb.Size = new Size(160, 26);
             moodlb.TabIndex = 7;
             moodlb.TabStop = true;
             moodlb.Text = "Mood Tracker";
@@ -85,7 +85,7 @@
             Dashlb.LinkColor = SystemColors.ActiveCaption;
             Dashlb.Location = new Point(24, 39);
             Dashlb.Name = "Dashlb";
-            Dashlb.Size = new Size(102, 18);
+            Dashlb.Size = new Size(148, 28);
             Dashlb.TabIndex = 8;
             Dashlb.TabStop = true;
             Dashlb.Text = "Dash Board";
@@ -98,7 +98,7 @@
             Journallb.LinkColor = SystemColors.ActiveCaption;
             Journallb.Location = new Point(30, 143);
             Journallb.Name = "Journallb";
-            Journallb.Size = new Size(73, 22);
+            Journallb.Size = new Size(108, 32);
             Journallb.TabIndex = 9;
             Journallb.TabStop = true;
             Journallb.Text = "Journal";
@@ -113,11 +113,12 @@
             Excericselb.LinkColor = SystemColors.ActiveCaption;
             Excericselb.Location = new Point(30, 201);
             Excericselb.Name = "Excericselb";
-            Excericselb.Size = new Size(73, 21);
+            Excericselb.Size = new Size(110, 33);
             Excericselb.TabIndex = 10;
             Excericselb.TabStop = true;
             Excericselb.Text = "Exercise";
             Excericselb.VisitedLinkColor = SystemColors.ActiveCaption;
+            Excericselb.LinkClicked += Excericselb_LinkClicked;
             // 
             // soundlb
             // 
@@ -126,11 +127,12 @@
             soundlb.LinkColor = SystemColors.ActiveCaption;
             soundlb.Location = new Point(30, 270);
             soundlb.Name = "soundlb";
-            soundlb.Size = new Size(107, 21);
+            soundlb.Size = new Size(155, 33);
             soundlb.TabIndex = 11;
             soundlb.TabStop = true;
             soundlb.Text = "Sound Track";
             soundlb.VisitedLinkColor = SystemColors.ActiveCaption;
+            soundlb.LinkClicked += soundlb_LinkClicked;
             // 
             // logubtn
             // 
@@ -147,7 +149,7 @@
             // 
             // DashFr
             // 
-            AutoScaleDimensions = new SizeF(10F, 18F);
+            AutoScaleDimensions = new SizeF(15F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1073, 749);
             Controls.Add(logubtn);
