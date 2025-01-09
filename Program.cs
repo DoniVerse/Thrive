@@ -11,7 +11,9 @@ namespace thrive
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginForm());
+            //Application.Run(new Mymp3player());
+            Application.Run(new MediaPlayer());
+           
             //Application.Run(new MoodForm());
             //Application.Run(new RegForm());
             //Application.Run(new DashFr());

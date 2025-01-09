@@ -42,6 +42,7 @@ namespace thrive
         private void rainlabel_Click(object sender, EventArgs e)
         {
              PlaySoundtrack("path_to_rain_fall.mp3");
+
         }
     }
 }
