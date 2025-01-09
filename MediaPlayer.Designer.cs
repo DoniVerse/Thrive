@@ -37,7 +37,6 @@
             btnpause = new Button();
             btnstop = new Button();
             btnSart = new Button();
-            btnLoad = new Button();
             label1 = new Label();
             listBox1 = new ListBox();
             timerplayback = new System.Windows.Forms.Timer(components);
@@ -65,7 +64,6 @@
             panel1.Controls.Add(btnpause);
             panel1.Controls.Add(btnstop);
             panel1.Controls.Add(btnSart);
-            panel1.Controls.Add(btnLoad);
             panel1.Location = new Point(0, 419);
             panel1.Name = "panel1";
             panel1.Size = new Size(1027, 140);
@@ -91,7 +89,7 @@
             // btnpause
             // 
             btnpause.BackColor = SystemColors.ActiveCaption;
-            btnpause.Location = new Point(490, 57);
+            btnpause.Location = new Point(468, 59);
             btnpause.Name = "btnpause";
             btnpause.Size = new Size(134, 67);
             btnpause.TabIndex = 3;
@@ -102,7 +100,7 @@
             // btnstop
             // 
             btnstop.BackColor = SystemColors.ActiveCaption;
-            btnstop.Location = new Point(335, 57);
+            btnstop.Location = new Point(245, 59);
             btnstop.Name = "btnstop";
             btnstop.Size = new Size(134, 67);
             btnstop.TabIndex = 2;
@@ -113,24 +111,13 @@
             // btnSart
             // 
             btnSart.BackColor = SystemColors.ActiveCaption;
-            btnSart.Location = new Point(175, 57);
+            btnSart.Location = new Point(30, 57);
             btnSart.Name = "btnSart";
             btnSart.Size = new Size(134, 67);
             btnSart.TabIndex = 1;
             btnSart.Text = "Start";
             btnSart.UseVisualStyleBackColor = false;
             btnSart.Click += btnSart_Click;
-            // 
-            // btnLoad
-            // 
-            btnLoad.BackColor = SystemColors.ActiveCaption;
-            btnLoad.Location = new Point(12, 57);
-            btnLoad.Name = "btnLoad";
-            btnLoad.Size = new Size(134, 67);
-            btnLoad.TabIndex = 0;
-            btnLoad.Text = "Load";
-            btnLoad.UseVisualStyleBackColor = false;
-            btnLoad.Click += btnLoad_Click;
             // 
             // label1
             // 
@@ -143,6 +130,8 @@
             // 
             // listBox1
             // 
+            listBox1.DrawMode = DrawMode.OwnerDrawFixed;
+            listBox1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 25;
             listBox1.Location = new Point(0, 63);
@@ -166,7 +155,7 @@
             Controls.Add(panel1);
             Controls.Add(musicPlayer);
             Name = "MediaPlayer";
-            Text = "MediaPlayer";
+            Text = "Sound Track";
             Load += MediaPlayer_Load;
             ((System.ComponentModel.ISupportInitialize)musicPlayer).EndInit();
             panel1.ResumeLayout(false);
@@ -183,7 +172,6 @@
         private Button btnpause;
         private Button btnstop;
         private Button btnSart;
-        private Button btnLoad;
         private Label label1;
         private TrackBar trackBar1;
         private ListBox listBox1;
