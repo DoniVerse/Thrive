@@ -14,7 +14,7 @@ namespace thrive
     public partial class MediaPlayer : Form
     {
         private List<string> musicFiles;
-        private Dictionary<string, Image> musicImages; // Dictionary to store music-image mapping
+        private Dictionary<string, Image> musicImages; 
         private string currentsong;
         private bool isPaused;
         private bool isChangingPosition;
@@ -23,26 +23,26 @@ namespace thrive
         {
             InitializeComponent();
             musicFiles = new List<string>();
-            musicImages = new Dictionary<string, Image>(); // Initialize the dictionary
+            musicImages = new Dictionary<string, Image>(); 
             isPaused = false;
             isChangingPosition = false;
 
-            listBox1.DrawMode = DrawMode.OwnerDrawFixed; // Enable custom drawing
-            listBox1.DrawItem += ListBox1_DrawItem; // Subscribe to DrawItem event
+            listBox1.DrawMode = DrawMode.OwnerDrawFixed;
+            listBox1.DrawItem += ListBox1_DrawItem; 
         }
 
         private void MediaPlayer_Load(object sender, EventArgs e)
         {
-            string musicFolderPath = @"C:\Users\HP\source\Thrive\Soundtracks"; // Change this to the full path of your folder
+            string musicFolderPath = @"C:\Users\HP\source\Thrive\Soundtracks";
             LoadMusicFilesFromFolder(musicFolderPath);
 
-            // Populate the ListBox with music file names
+           
             foreach (var file in musicFiles)
             {
-                listBox1.Items.Add(Path.GetFileName(file)); // Add file names to ListBox
+                listBox1.Items.Add(Path.GetFileName(file)); 
             }
 
-            // Enable the start button if there are music files
+           
             btnSart.Enabled = musicFiles.Count > 0;
         }
 
@@ -50,16 +50,16 @@ namespace thrive
         {
             if (Directory.Exists(folderPath))
             {
-                string[] files = Directory.GetFiles(folderPath, "*.mp3"); // Load all MP3 files
-                musicFiles.AddRange(files); // Add all music files to the list
+                string[] files = Directory.GetFiles(folderPath, "*.mp3"); 
+                musicFiles.AddRange(files);
 
                 // Load corresponding images
                 foreach (var file in files)
                 {
-                    string imagePath = Path.ChangeExtension(file, ".jpg"); // Adjust if necessary
+                    string imagePath = Path.ChangeExtension(file, ".jpg"); 
                     if (File.Exists(imagePath))
                     {
-                        musicImages[Path.GetFileName(file)] = Image.FromFile(imagePath); // Store image
+                        musicImages[Path.GetFileName(file)] = Image.FromFile(imagePath); 
                     }
                 }
             }
@@ -111,7 +111,7 @@ namespace thrive
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Optionally handle selection change
+           
         }
 
         private void ListBox1_DrawItem(object sender, DrawItemEventArgs e)
@@ -120,16 +120,16 @@ namespace thrive
 
             if (e.Index < 0) return;
 
-            // Get the music file name
+           
             string musicFileName = listBox1.Items[e.Index].ToString();
 
-            // Draw the image if it exists
+           
             if (musicImages.TryGetValue(musicFileName, out Image albumArt))
             {
-                e.Graphics.DrawImage(albumArt, e.Bounds.X, e.Bounds.Y, 50, 50); // Draw image
+                e.Graphics.DrawImage(albumArt, e.Bounds.X, e.Bounds.Y, 50, 50); 
             }
 
-            // Draw the text next to the image
+           
             e.Graphics.DrawString(musicFileName, e.Font, Brushes.Black, e.Bounds.X + 60, e.Bounds.Y);
 
             e.DrawFocusRectangle();
@@ -145,13 +145,12 @@ namespace thrive
         {
             if (!isChangingPosition)
             {
-                // Update any playback information
+                
             }
         }
 
         private void musicPlayer_Enter(object sender, EventArgs e)
         {
-            // Handle player enter event if needed
         }
 
         private void musicPlayer_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)

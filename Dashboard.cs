@@ -60,7 +60,7 @@ namespace thrive
 
         private void soundlb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SoundTrack soundTrack = new SoundTrack();   
+            MediaPlayer soundTrack = new MediaPlayer();   
             soundTrack.FormClosed+= (s, args) => this.Show();
             soundTrack.Show();
             this.Hide();
