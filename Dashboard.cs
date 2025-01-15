@@ -31,7 +31,7 @@ namespace thrive
             MoodForm md = new MoodForm();
             md.FormClosed += (s, args) => this.Show();
             md.Show();
-            this.Hide();
+            this.Close();
 
         }
 
@@ -41,12 +41,14 @@ namespace thrive
             NotePad note= new NotePad();
             note.Show();
             this.Close();
+            //note.FormClosed+= (s, args) => this.Show();
+            
            
 
-            Journal jr = new Journal();
-            jr.FormClosed += (s, args) => this.Show();
-            jr.Show();
-            this.Hide();
+            //Journal jr = new Journal();
+            //jr.FormClosed += (s, args) => this.Show();  
+            //jr.Show();
+            //this.Hide();
 
         }
 
@@ -55,7 +57,7 @@ namespace thrive
             Exercise ex = new Exercise();
             ex.FormClosed += (s, args) => this.Show();
             ex.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void soundlb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -63,7 +65,7 @@ namespace thrive
             SoundTrack soundTrack = new SoundTrack();   
             soundTrack.FormClosed+= (s, args) => this.Show();
             soundTrack.Show();
-            this.Hide();
+            this.Close();
 
         }
     }

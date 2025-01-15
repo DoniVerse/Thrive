@@ -13,7 +13,7 @@ namespace thrive
             ApplicationConfiguration.Initialize();
             Application.Run(new LoginForm());
             //Application.Run(new MoodForm());
-            //Application.Run(new RegForm());
+           // Application.Run(new RegForm());
             //Application.Run(new DashFr());
 
         }

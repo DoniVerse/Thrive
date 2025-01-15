@@ -18,7 +18,7 @@ namespace thrive
             InitializeComponent();
         }
 
-        private void SaveBut_Click(object sender, EventArgs e)
+        private void SaveBut_Click(object sender, EventArgs e )
         {
           
             string content = NoteTxtBx.Text;
@@ -30,16 +30,22 @@ namespace thrive
             }
 
             // Create an instance of the Journal class
+            
             ClassJournal journal = new ClassJournal();
             int CurrentuserId =journal.UserJournalId;
             int JournalId = journal.EntryId;
+           //string ?cotent = journal.Content;
             // Call the CreateEntry method to save the entry
-            bool success = journal.CreateEntry(JournalId,CurrentuserId, content);
+            
+            bool success = journal.CreateEntry(JournalId, CurrentuserId, content);
 
             // Clear the text area if the entry was saved successfully
             if (success)
             {
+                MessageBox.Show("Journal added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               
                 NoteTxtBx.Text = ""; // Clear the text area
+                
             }
 
         }

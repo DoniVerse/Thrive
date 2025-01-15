@@ -32,14 +32,53 @@ namespace thrive
         private void ButLog_Click(object sender, EventArgs e)
         {
 
-            User usr = new User();
+           
             string username = UsrTxtBx.Text.Trim();
             string email = EmailTxtBx.Text.Trim();
-            string password = PwdTxtBx.Text.Trim();
+            string ?password = PwdTxtBx.Text.Trim();
 
-            usr.login(username, email, password);
-            DashFr dashboard = new DashFr(); // Open dashboard form
-            dashboard.Show();
+            if (string.IsNullOrEmpty(username))
+            {
+                MessageBox.Show("Username cannot be empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Email cannot be empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Password cannot be empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Assuming you fetch the UserId based on the username or email
+            User usr = new User
+            {
+                UserName = username,
+                Email = email,
+                Password = password
+            };
+
+            // Simulate fetching the UserId from the database
+            User.UserId = int.Parse(username); // This should be retrieved from your user management logic
+            bool succ = usr.login(User.UserId, password);
+
+            if (succ)
+            {
+                DashFr dashboard = new DashFr(); // Open dashboard form
+                dashboard.Show();
+                this.Hide(); // Hide the login form
+            }
+            else
+            {
+                MessageBox.Show("Login failed. Please check your credentials.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
             //RegForm reg= new RegForm();
             //reg.Show();
             //string v = db.TestConnection();

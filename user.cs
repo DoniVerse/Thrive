@@ -10,7 +10,7 @@ namespace thrive
 {
     internal class User
     {
-        public int UserId { get; set; }
+        public static int UserId { get; set; }
         public string? UserName { get; set; }
         public string? Email { get; set; }
         public string? Password { get; set; }
@@ -45,10 +45,10 @@ namespace thrive
                     connection.Open();
 
                     // Check if user already exists
-                    string checkQuery = "SELECT COUNT(*) FROM User WHERE UserName = @UserName OR Email = @Email";
+                    string checkQuery = "SELECT COUNT(*) FROM User WHERE UserId = @UserId OR Email = @Email";
                     using (MySqlCommand checkCommand = new MySqlCommand(checkQuery, connection))
                     {
-                        checkCommand.Parameters.AddWithValue("@UserName", UserName);
+                        checkCommand.Parameters.AddWithValue("@UserId", UserId);
                         checkCommand.Parameters.AddWithValue("@Email", Email);
 
                         int userCount = Convert.ToInt32(checkCommand.ExecuteScalar());
@@ -60,9 +60,10 @@ namespace thrive
                     }
                     string hashedPassword = HashPassword(Password!);
                     // Insert the new user
-                    string insertQuery = "INSERT INTO User (UserName, Email, Password) VALUES (@UserName, @Email, @Password);";
+                    string insertQuery = "INSERT INTO User (UserId,UserName, Email, Password) VALUES (@UserId,@UserName, @Email, @Password);";
                     using (MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection))
                     {
+                        insertCommand.Parameters.AddWithValue("@UserId", UserId);
                         insertCommand.Parameters.AddWithValue("@UserName", UserName);
                         insertCommand.Parameters.AddWithValue("@Email", Email);
                         insertCommand.Parameters.AddWithValue("@Password", hashedPassword); // Remember to hash the password
@@ -81,8 +82,10 @@ namespace thrive
                 return false;
             }
         }
-        public bool login(string username,string email, string password)
+        public bool login(int UserId, string? password)
         {
+            //UserId = this.UserId;
+            //password = this.Password;
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -90,10 +93,10 @@ namespace thrive
                     connection.Open();
 
                     // Check if user exists
-                    string selectQuery = "SELECT Password FROM User WHERE Email = @Email";
+                    string selectQuery = "SELECT Password FROM user WHERE UserId = @UserId";
                     using (var selectCommand = new MySqlCommand(selectQuery, connection))
                     {
-                        selectCommand.Parameters.AddWithValue("@Email", email);
+                        selectCommand.Parameters.AddWithValue("@UserId", UserId);
                         var result = selectCommand.ExecuteScalar();
 
                         if (result != null)
@@ -102,8 +105,7 @@ namespace thrive
                             if (BCrypt.Net.BCrypt.Verify(password, storedHashedPassword))
                             {
                                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                
-
+                               
                                 return true;
                             }
                         }
