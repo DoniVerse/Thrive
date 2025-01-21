@@ -32,10 +32,10 @@ namespace thrive
         private void ButLog_Click(object sender, EventArgs e)
         {
 
-           
+
             string username = UsrTxtBx.Text.Trim();
             string email = EmailTxtBx.Text.Trim();
-            string ?password = PwdTxtBx.Text.Trim();
+            string? password = PwdTxtBx.Text.Trim();
 
             if (string.IsNullOrEmpty(username))
             {
@@ -115,8 +115,13 @@ namespace thrive
         private void SignLinkLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RegForm rg = new RegForm();
-           rg.Show();
-          
+            rg.Show();
+
+        }
+
+        private void UsrLbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

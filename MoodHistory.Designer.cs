@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             MoodHisBackBut = new Button();
-            MoodListView = new ListView();
+            MoodListView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)MoodListView).BeginInit();
             SuspendLayout();
             // 
             // MoodHisBackBut
@@ -43,14 +44,16 @@
             MoodHisBackBut.TabIndex = 1;
             MoodHisBackBut.Text = "Back";
             MoodHisBackBut.UseVisualStyleBackColor = false;
+            MoodHisBackBut.Click += MoodHisBackBut_Click;
             // 
             // MoodListView
             // 
-            MoodListView.Location = new Point(12, 12);
+            MoodListView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            MoodListView.Location = new Point(29, 30);
             MoodListView.Name = "MoodListView";
-            MoodListView.Size = new Size(776, 389);
+            MoodListView.Size = new Size(737, 375);
             MoodListView.TabIndex = 2;
-            MoodListView.UseCompatibleStateImageBehavior = false;
+            MoodListView.CellContentClick += MoodListView_CellContentClick;
             // 
             // MoodHistory
             // 
@@ -62,11 +65,12 @@
             Controls.Add(MoodHisBackBut);
             Name = "MoodHistory";
             Text = "MoodHistory";
+            ((System.ComponentModel.ISupportInitialize)MoodListView).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private Button MoodHisBackBut;
-        private ListView MoodListView;
+        private DataGridView MoodListView;
     }
 }

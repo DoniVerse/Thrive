@@ -17,7 +17,14 @@ namespace thrive
         {
             InitializeComponent();
         }
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            base.OnFormClosed(e);
 
+            // Reopen the Dashboard form when Exercise form is closed
+            DashFr dashboard = new DashFr();
+            dashboard.Show();
+        }
         private void LogMoodBut_Click(object sender, EventArgs e)
         {
             List<string> selectedMoods = new List<string>();
@@ -55,6 +62,11 @@ namespace thrive
         {
             MoodHistory mh = new MoodHistory();
             mh.Show();
+        }
+
+        private void MoodForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

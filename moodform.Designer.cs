@@ -309,6 +309,7 @@
             Location = new Point(215, -1);
             Name = "MoodForm";
             Text = "MoodForm";
+            Load += MoodForm_Load;
             MoodPnl.ResumeLayout(false);
             MoodPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)JoyPicBx).EndInit();

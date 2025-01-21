@@ -26,22 +26,26 @@ namespace thrive
             //List<Journal> entries = journal.ViewEntries(currentUserId);
 
             // Clear the list view before populating
-           
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            ClassJournal cj = new ClassJournal();
+            JournalDtaGrid.DataSource = cj.ViewEntries();
+            JournalDtaGrid.AutoGenerateColumns = true;
         }
 
         private void AddBut_Click(object sender, EventArgs e)
         {
-           
+            NotePad note = new NotePad();
+            note.Show();
+            this.Close();
         }
+            private void DelBut_Click(object sender, EventArgs e)
+            {
 
-        private void DelBut_Click(object sender, EventArgs e)
-        {
-           
+            }
         }
     }
-}
+

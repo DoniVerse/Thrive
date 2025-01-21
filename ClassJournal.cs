@@ -66,10 +66,11 @@ namespace thrive
                 return false;
             }
         }
-        public List<Journal> ViewEntries(int userId)
+        public List<ClassJournal> ViewEntries()
         {
-            List<Journal> entries = new List<Journal>();
+            List<ClassJournal> entries = new List<ClassJournal>();
             UserJournalId = User.UserId;
+            DataTable DT = new DataTable();
 
             try
             {
@@ -81,18 +82,13 @@ namespace thrive
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@UserJournal_Id", UserJournalId);
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
 
-                        //using (MySqlDataReader reader = cmd.ExecuteReader())
+                        // Fill the DataTable with the result set
+                        adapter.Fill(DT);
+                        //foreach (DataRow row in DT.Rows)
                         //{
-                        //    while (reader.Read())
-                        //    {
-                        //        entries.Add(new ClassJournal
-                        //        {
-                        //            EntryId = reader.GetInt32("EntryId"),
-                        //            UserJournalId = reader.GetInt32("UserId"),
-                        //            Content = reader.GetString("Content")
-                        //        });
-                        //    }
+                        //    entries.Add(row["Cotent"]);
                         //}
                     }
                 }

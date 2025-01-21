@@ -68,7 +68,7 @@
             BackJourBut.Name = "BackJourBut";
             BackJourBut.Size = new Size(132, 40);
             BackJourBut.TabIndex = 2;
-            BackJourBut.Text = "Back to Journal";
+            BackJourBut.Text = "Your Journal";
             BackJourBut.UseVisualStyleBackColor = false;
             BackJourBut.Click += BackJourBut_Click;
             // 
@@ -83,6 +83,7 @@
             Controls.Add(NoteTxtBx);
             Name = "NotePad";
             Text = "NotePad";
+            Load += NotePad_Load;
             ResumeLayout(false);
             PerformLayout();
         }

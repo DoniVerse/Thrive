@@ -1,7 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,6 +21,9 @@ namespace thrive
         // Method to log a mood
         public bool LogMood(int userId, string moodScore, DateTime date)
         {
+            UserId = User.UserId; 
+            MoodScore = moodScore;
+            Date = date;
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -29,9 +34,9 @@ namespace thrive
                     string insertQuery = "INSERT INTO MoodTracker (UserId, MoodScore, Date) VALUES (@UserId, @MoodScore, @Date)";
                     using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@UserId", userId);
-                        command.Parameters.AddWithValue("@MoodScore", moodScore);
-                        command.Parameters.AddWithValue("@Date", date);
+                        command.Parameters.AddWithValue("@UserId", UserId);
+                        command.Parameters.AddWithValue("@MoodScore", MoodScore);
+                        command.Parameters.AddWithValue("@Date", Date);
 
                         command.ExecuteNonQuery();
                     }
@@ -48,9 +53,10 @@ namespace thrive
         }
 
         // Method to get mood history
-        public List<MoodTracker> GetMoodHistory(int userId)
+        public DataTable GetMoodHistory(int userId)
         {
-            List<MoodTracker> moodHistory = new List<MoodTracker>();
+            UserId = User.UserId;
+            DataTable MHT = new DataTable();
 
             try
             {
@@ -59,26 +65,11 @@ namespace thrive
                     connection.Open();
 
                     // Retrieve mood history for the user
-                    string selectQuery = "SELECT MoodId, UserId, MoodScore, Date FROM MoodTracker WHERE UserId = @UserId ORDER BY Date DESC";
-                    using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
+                    string selectQuery = "SELECT  UserId, MoodScore, Date FROM MoodTracker WHERE UserId = @UserId ORDER BY Date DESC";
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@UserId", userId);
-
-                        using (MySqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                MoodTracker mood = new MoodTracker
-                                {
-                                    MoodId = reader.GetInt32("MoodId"),
-                                    UserId = reader.GetInt32("UserId"),
-                                    MoodScore = reader.GetString("MoodScore"),
-                                    Date = reader.GetDateTime("Date")
-                                };
-
-                                moodHistory.Add(mood);
-                            }
-                        }
+                        adapter.SelectCommand.Parameters.AddWithValue("@UserId", UserId);
+                        adapter.Fill(MHT);
                     }
                 }
             }
@@ -87,7 +78,7 @@ namespace thrive
                 MessageBox.Show($"Error retrieving mood history: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            return moodHistory;
+            return MHT;
         }
     
 }

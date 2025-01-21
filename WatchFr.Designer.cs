@@ -42,6 +42,7 @@
             WatchMediaPlayer.OcxState = (AxHost.State)resources.GetObject("WatchMediaPlayer.OcxState");
             WatchMediaPlayer.Size = new Size(640, 414);
             WatchMediaPlayer.TabIndex = 0;
+            WatchMediaPlayer.Enter += WatchMediaPlayer_Enter;
             // 
             // WatchFrBut
             // 
@@ -55,6 +56,7 @@
             WatchFrBut.TabIndex = 1;
             WatchFrBut.Text = "Back";
             WatchFrBut.UseVisualStyleBackColor = false;
+            WatchFrBut.Click += WatchFrBut_Click;
             // 
             // WatchFr
             // 
@@ -66,6 +68,7 @@
             Controls.Add(WatchMediaPlayer);
             Name = "WatchFr";
             Text = "WatchFr";
+            Load += WatchFr_Load;
             ((System.ComponentModel.ISupportInitialize)WatchMediaPlayer).EndInit();
             ResumeLayout(false);
         }

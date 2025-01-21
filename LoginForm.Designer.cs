@@ -98,9 +98,10 @@
             UsrLbl.ForeColor = SystemColors.Highlight;
             UsrLbl.Location = new Point(195, 100);
             UsrLbl.Name = "UsrLbl";
-            UsrLbl.Size = new Size(85, 17);
+            UsrLbl.Size = new Size(57, 17);
             UsrLbl.TabIndex = 4;
-            UsrLbl.Text = "UserName";
+            UsrLbl.Text = "UserId";
+            UsrLbl.Click += UsrLbl_Click;
             // 
             // UsrTxtBx
             // 

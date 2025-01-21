@@ -21,27 +21,53 @@ namespace thrive
         {
             InitializeComponent();
         }
-        private void PlaySoundtrack(string filePath)
+        private void Play(int SoundId)
         {
-            // Stop any currently playing audio
-            waveOut?.Stop();
-            waveOut?.Dispose();
-            audioFileReader?.Dispose();
-
-            // Play the selected soundtrack
-            waveOut = new WaveOut();
-            audioFileReader = new AudioFileReader(filePath);
-            waveOut.Init(audioFileReader);
-            waveOut.Play();
+            Sound Sd = new Sound().PLaySound(SoundId);
+            if (Sd != null)
+            {
+                WatchFr playerForm = new WatchFr(Sd.SoundFile);
+                playerForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("sound not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void SoundTrack_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void rainlabel_Click(object sender, EventArgs e)
         {
-             PlaySoundtrack("path_to_rain_fall.mp3");
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Play(3);
+        }
+
+        private void RainLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Play(1);
+
+        }
+
+        private void NatureLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Play(2);
+        }
+
+        private void NFLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Play(4);
+        }
+
+        private void CozyLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Play(5);
         }
     }
 }

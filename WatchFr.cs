@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AxWMPLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,29 @@ namespace thrive
         public WatchFr()
         {
             InitializeComponent();
+        }
+        public WatchFr(string videoUrl)
+        {
+            InitializeComponent();
+            WatchMediaPlayer.URL = videoUrl; // Set the video URL
+            WatchMediaPlayer.Ctlcontrols.play(); // Start playback
+        }
+
+        private void WatchMediaPlayer_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WatchFrBut_Click(object sender, EventArgs e)
+        {
+            DashFr ds = new DashFr();
+            ds.Show();
+            this.Close();
+        }
+
+        private void WatchFr_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

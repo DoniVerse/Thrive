@@ -29,9 +29,10 @@ namespace thrive
         private void moodlb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MoodForm md = new MoodForm();
-            md.FormClosed += (s, args) => this.Show();
+           
             md.Show();
             this.Close();
+        
 
         }
 
@@ -55,7 +56,7 @@ namespace thrive
         private void Excericselb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Exercise ex = new Exercise();
-            ex.FormClosed += (s, args) => this.Show();
+           
             ex.Show();
             this.Close();
         }
@@ -63,7 +64,7 @@ namespace thrive
         private void soundlb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SoundTrack soundTrack = new SoundTrack();   
-            soundTrack.FormClosed+= (s, args) => this.Show();
+           
             soundTrack.Show();
             this.Close();
 

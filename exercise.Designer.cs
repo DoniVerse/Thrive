@@ -136,6 +136,7 @@
             YogaWatchBut.TabIndex = 7;
             YogaWatchBut.Text = "Watch now";
             YogaWatchBut.UseVisualStyleBackColor = false;
+            YogaWatchBut.Click += YogaWatchBut_Click;
             // 
             // MediLbl
             // 
@@ -192,6 +193,7 @@
             BreathBut.TabIndex = 12;
             BreathBut.Text = "Watch now";
             BreathBut.UseVisualStyleBackColor = false;
+            BreathBut.Click += BreathBut_Click;
             // 
             // PilatesBut
             // 
@@ -204,6 +206,7 @@
             PilatesBut.TabIndex = 13;
             PilatesBut.Text = "Watch now";
             PilatesBut.UseVisualStyleBackColor = false;
+            PilatesBut.Click += PilatesBut_Click;
             // 
             // MediBut
             // 
@@ -229,6 +232,7 @@
             TaiBut.TabIndex = 15;
             TaiBut.Text = "Watch now";
             TaiBut.UseVisualStyleBackColor = false;
+            TaiBut.Click += TaiBut_Click;
             // 
             // Exercise
             // 
@@ -254,6 +258,7 @@
             Margin = new Padding(2);
             Name = "Exercise";
             Text = "exercise";
+            Load += Exercise_Load;
             ((System.ComponentModel.ISupportInitialize)YogaPicBx).EndInit();
             ((System.ComponentModel.ISupportInitialize)TaiPicBx).EndInit();
             ((System.ComponentModel.ISupportInitialize)MediPicBx).EndInit();
