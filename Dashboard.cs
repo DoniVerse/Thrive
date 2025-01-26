@@ -63,10 +63,11 @@ namespace thrive
 
         private void soundlb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SoundTrack soundTrack = new SoundTrack();   
-           
-            soundTrack.Show();
+            SoundTrack sd = new SoundTrack();
+            sd.Show();
             this.Close();
+
+
 
         }
     }

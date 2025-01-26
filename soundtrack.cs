@@ -14,12 +14,18 @@ namespace thrive
     public partial class SoundTrack : Form
     {
 
-        private List<string> soundtracks = new List<string>();
-        private IWavePlayer waveOut;
-        private AudioFileReader audioFileReader;
+       
         public SoundTrack()
         {
             InitializeComponent();
+        }
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            base.OnFormClosed(e);
+
+            // Reopen the Dashboard form when Exercise form is closed
+            DashFr dashboard = new DashFr();
+            dashboard.Show();
         }
         private void Play(int SoundId)
         {
@@ -39,10 +45,10 @@ namespace thrive
 
         }
 
-        private void rainlabel_Click(object sender, EventArgs e)
-        {
+        //private void rainlabel_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -68,6 +74,7 @@ namespace thrive
         private void CozyLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Play(5);
+
         }
     }
 }
