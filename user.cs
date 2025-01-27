@@ -122,6 +122,23 @@ namespace thrive
             }
 
         }
+        public void Logout()
+        {
+            try
+            {
+                // Clear user session data
+                User.UserId = 0;  // Reset UserId to indicate no user is logged in
+                //User.Password = null;  // Clear the password (if stored in memory)
+
+                // Optionally, show a logout confirmation message
+                MessageBox.Show("You have successfully logged out.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred during logout: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
 
     }

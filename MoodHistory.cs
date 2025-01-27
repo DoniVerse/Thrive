@@ -34,14 +34,10 @@ namespace thrive
 
         }
 
-        private void MoodHisDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            MoodTracker mt = new MoodTracker();
-            int id = User.UserId;
-            MoodListView.DataSource = mt.GetMoodHistory(id);
-            MoodListView.AutoGenerateColumns = true;
+        //private void MoodHisDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
 
-        }
+        //}
 
         private void MoodListView_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -50,14 +46,18 @@ namespace thrive
         private void MoodListView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-          
+            MoodTracker mt = new MoodTracker();
+            int id = User.UserId;
+            MoodListView.DataSource = mt.GetMoodHistory(id);
+            MoodListView.AutoGenerateColumns = true;
+
         }
 
-        private void MoodHisBackBut_Click(object sender, EventArgs e)
-        {
-            MoodForm mf = new MoodForm();
-            this.Close();
-            mf.Show();
-        }
+        //private void MoodHisBackBut_Click(object sender, EventArgs e)
+        //{
+        //    MoodForm mf = new MoodForm();
+        //    this.Close();
+        //    mf.Show();
+        //}
     }
 }

@@ -55,7 +55,7 @@ namespace thrive
         // Method to get mood history
         public DataTable GetMoodHistory(int userId)
         {
-            UserId = User.UserId;
+            //UserId = User.UserId;
             DataTable MHT = new DataTable();
 
             try
@@ -65,10 +65,10 @@ namespace thrive
                     connection.Open();
 
                     // Retrieve mood history for the user
-                    string selectQuery = "SELECT  UserId, MoodScore, Date FROM MoodTracker WHERE UserId = @UserId ORDER BY Date DESC";
+                    string selectQuery = "SELECT  UserId, MoodScore, Date FROM moodtracker WHERE UserId = @UserId ORDER BY Date DESC";
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection))
                     {
-                        adapter.SelectCommand.Parameters.AddWithValue("@UserId", UserId);
+                        adapter.SelectCommand.Parameters.AddWithValue("@UserId", userId);
                         adapter.Fill(MHT);
                     }
                 }

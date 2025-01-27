@@ -105,6 +105,7 @@
             MoodPnl.Name = "MoodPnl";
             MoodPnl.Size = new Size(740, 403);
             MoodPnl.TabIndex = 2;
+            MoodPnl.Paint += MoodPnl_Paint;
             // 
             // MoodHisBut
             // 

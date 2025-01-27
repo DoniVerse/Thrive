@@ -17,7 +17,7 @@ namespace thrive
 {
     public partial class RegForm : Form
     {
-      
+
 
         public RegForm()
         {
@@ -67,8 +67,8 @@ namespace thrive
                 {
                     MessageBox.Show("Registered successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
-                    
-                  
+
+
                     LoginForm lgFr = new LoginForm();
                     lgFr.Show();
                 }
@@ -81,7 +81,14 @@ namespace thrive
             {
                 MessageBox.Show($"Error during registration: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            LoginForm lgFr = new LoginForm();
+            lgFr.Show();
+            this.Close();
         }
         //private void RegForm_FormClosing(object? sender, FormClosingEventArgs e)
         //{

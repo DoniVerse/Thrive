@@ -20,7 +20,13 @@ namespace thrive
             InitializeComponent();
 
         }
-
+        //protected override void OnFormClosed(FormClosedEventArgs e)
+        //{
+        //    base.OnFormClosed(e);
+        //    LoginForm lg = new LoginForm();
+        //    lg.Show();
+        //    this.Close();
+        //}
         private void DashPnl_Paint(object sender, PaintEventArgs e)
         {
 
@@ -29,22 +35,22 @@ namespace thrive
         private void moodlb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MoodForm md = new MoodForm();
-           
+
             md.Show();
             this.Close();
-        
+
 
         }
 
         private void Journallb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
-            NotePad note= new NotePad();
+            NotePad note = new NotePad();
             note.Show();
             this.Close();
             //note.FormClosed+= (s, args) => this.Show();
-            
-           
+
+
 
             //Journal jr = new Journal();
             //jr.FormClosed += (s, args) => this.Show();  
@@ -56,7 +62,7 @@ namespace thrive
         private void Excericselb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Exercise ex = new Exercise();
-           
+
             ex.Show();
             this.Close();
         }
@@ -69,6 +75,15 @@ namespace thrive
 
 
 
+        }
+
+        private void LogoutLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            User us = new User();
+            us.Logout();
+            this.Close();
+            LoginForm lg = new LoginForm();
+            lg.Show();
         }
     }
 }

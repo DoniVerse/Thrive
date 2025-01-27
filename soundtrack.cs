@@ -22,8 +22,6 @@ namespace thrive
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
             base.OnFormClosed(e);
-
-            // Reopen the Dashboard form when Exercise form is closed
             DashFr dashboard = new DashFr();
             dashboard.Show();
         }

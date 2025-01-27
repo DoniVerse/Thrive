@@ -16,7 +16,7 @@ namespace thrive
         {
 
             InitializeComponent();
-            db = new DBConnection();
+            //db = new DBConnection();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -71,57 +71,35 @@ namespace thrive
             {
                 DashFr dashboard = new DashFr(); // Open dashboard form
                 dashboard.Show();
-                this.Hide(); // Hide the login form
+                this.Hide();
+                // Hide the login form
             }
             else
             {
                 MessageBox.Show("Login failed. Please check your credentials.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-
-            //RegForm reg= new RegForm();
-            //reg.Show();
-            //string v = db.TestConnection();
-            //string message = v;// Call the TestConnection method
-            //MessageBox.Show(message, "Connection Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //try
-            //{
-            //    User user = new User
-            //    {
-            //        UserName = UsrTxtBx.Text.Trim(),
-            //        Password = PwdTxtBx.Text.Trim()
-            //    };
-
-            //    if (user.Login())
-            //    {
-            //        MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //        // Redirect to dashboard form
-            //        this.Hide();
-            //        DashFr dashboardForm = new DashFr();
-            //        dashboardForm.Show();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Invalid email or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Error during login: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+          
         }
 
         private void SignLinkLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RegForm rg = new RegForm();
-            rg.Show();
+            //RegForm rg = new RegForm();
+            //rg.Show();
+            //this.Close();
 
         }
 
         private void UsrLbl_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void RegLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegForm rg = new RegForm();
+            rg.Show();
+            this.Close();
         }
     }
 }

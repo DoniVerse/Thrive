@@ -39,6 +39,8 @@
             txtBxCpwd = new TextBox();
             EmailLbl = new Label();
             EmailTxtBx = new TextBox();
+            HaveAccLbl = new Label();
+            LogLbl = new Label();
             SuspendLayout();
             // 
             // SignLbl
@@ -66,7 +68,7 @@
             ButSign.FlatStyle = FlatStyle.Flat;
             ButSign.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ButSign.ForeColor = Color.Transparent;
-            ButSign.Location = new Point(363, 344);
+            ButSign.Location = new Point(363, 334);
             ButSign.Name = "ButSign";
             ButSign.Size = new Size(75, 28);
             ButSign.TabIndex = 2;
@@ -142,11 +144,38 @@
             EmailTxtBx.Size = new Size(221, 23);
             EmailTxtBx.TabIndex = 9;
             // 
+            // HaveAccLbl
+            // 
+            HaveAccLbl.AutoSize = true;
+            HaveAccLbl.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            HaveAccLbl.ForeColor = SystemColors.Highlight;
+            HaveAccLbl.Location = new Point(247, 378);
+            HaveAccLbl.Margin = new Padding(2, 0, 2, 0);
+            HaveAccLbl.Name = "HaveAccLbl";
+            HaveAccLbl.Size = new Size(201, 21);
+            HaveAccLbl.TabIndex = 10;
+            HaveAccLbl.Text = "Already have an account?";
+            // 
+            // LogLbl
+            // 
+            LogLbl.AutoSize = true;
+            LogLbl.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LogLbl.ForeColor = SystemColors.Highlight;
+            LogLbl.Location = new Point(467, 378);
+            LogLbl.Margin = new Padding(2, 0, 2, 0);
+            LogLbl.Name = "LogLbl";
+            LogLbl.Size = new Size(53, 21);
+            LogLbl.TabIndex = 11;
+            LogLbl.Text = "Login";
+            LogLbl.Click += label1_Click;
+            // 
             // RegForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(LogLbl);
+            Controls.Add(HaveAccLbl);
             Controls.Add(EmailTxtBx);
             Controls.Add(EmailLbl);
             Controls.Add(txtBxCpwd);
@@ -178,5 +207,7 @@
         private TextBox txtBxCpwd;
         private Label EmailLbl;
         private TextBox EmailTxtBx;
+        private Label HaveAccLbl;
+        private Label LogLbl;
     }
 }

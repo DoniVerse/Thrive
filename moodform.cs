@@ -68,5 +68,10 @@ namespace thrive
         {
 
         }
+
+        private void MoodPnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

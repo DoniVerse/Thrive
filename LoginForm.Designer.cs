@@ -39,9 +39,9 @@
             UsrTxtBx = new TextBox();
             label1 = new Label();
             HaveAccLbl = new Label();
-            SignLinkLbl = new LinkLabel();
             EmailLbl = new Label();
             EmailTxtBx = new TextBox();
+            RegLbl = new LinkLabel();
             SuspendLayout();
             // 
             // LogLbl
@@ -134,19 +134,6 @@
             HaveAccLbl.TabIndex = 7;
             HaveAccLbl.Text = "Don't have an Account ?";
             // 
-            // SignLinkLbl
-            // 
-            SignLinkLbl.AutoSize = true;
-            SignLinkLbl.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SignLinkLbl.LinkColor = SystemColors.Highlight;
-            SignLinkLbl.Location = new Point(481, 329);
-            SignLinkLbl.Name = "SignLinkLbl";
-            SignLinkLbl.Size = new Size(84, 16);
-            SignLinkLbl.TabIndex = 8;
-            SignLinkLbl.TabStop = true;
-            SignLinkLbl.Text = "Register here";
-            SignLinkLbl.LinkClicked += SignLinkLbl_LinkClicked;
-            // 
             // EmailLbl
             // 
             EmailLbl.AutoSize = true;
@@ -167,15 +154,28 @@
             EmailTxtBx.Size = new Size(205, 29);
             EmailTxtBx.TabIndex = 10;
             // 
+            // RegLbl
+            // 
+            RegLbl.AutoSize = true;
+            RegLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            RegLbl.LinkColor = Color.DodgerBlue;
+            RegLbl.Location = new Point(490, 329);
+            RegLbl.Name = "RegLbl";
+            RegLbl.Size = new Size(104, 21);
+            RegLbl.TabIndex = 11;
+            RegLbl.TabStop = true;
+            RegLbl.Text = "Register Here";
+            RegLbl.LinkClicked += RegLbl_LinkClicked;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(800, 449);
+            Controls.Add(RegLbl);
             Controls.Add(EmailTxtBx);
             Controls.Add(EmailLbl);
-            Controls.Add(SignLinkLbl);
             Controls.Add(HaveAccLbl);
             Controls.Add(label1);
             Controls.Add(UsrTxtBx);
@@ -203,8 +203,8 @@
         private TextBox UsrTxtBx;
         private Label label1;
         private Label HaveAccLbl;
-        private LinkLabel SignLinkLbl;
         private Label EmailLbl;
         private TextBox EmailTxtBx;
+        private LinkLabel RegLbl;
     }
 }
