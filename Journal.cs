@@ -53,8 +53,9 @@ namespace thrive
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             ClassJournal cj = new ClassJournal();
-            journalGrid.DataSource = cj.ViewEntries();
-            journalGrid.AutoGenerateColumns = true;
+            journalGrid.DataSource = cj.ViewEntries;
+            //journalGrid.DataSource = cj.ViewEntries();
+            //journalGrid.AutoGenerateColumns = true;
 
         }
     }

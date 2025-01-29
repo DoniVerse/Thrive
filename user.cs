@@ -14,7 +14,7 @@ namespace thrive
         public string? UserName { get; set; }
         public string? Email { get; set; }
         public string? Password { get; set; }
-        private string connectionString = "server=localhost;database=Thrive;user=root;password=;";
+        private string connectionString = "server=localhost;database=thrive;user=root;password=123;";
         public static bool IsValidEmail(string email)
         {
             // Regex pattern to ensure email ends with @gmail.com

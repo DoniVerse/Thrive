@@ -35,7 +35,7 @@ namespace thrive
         private void moodlb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MoodForm md = new MoodForm();
-
+            //md.FormClosed += (s, args) => this.Show();
             md.Show();
             this.Close();
 
@@ -46,6 +46,7 @@ namespace thrive
         {
 
             NotePad note = new NotePad();
+
             note.Show();
             this.Close();
             //note.FormClosed+= (s, args) => this.Show();
@@ -70,6 +71,7 @@ namespace thrive
         private void soundlb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SoundTrack sd = new SoundTrack();
+
             sd.Show();
             this.Close();
 
@@ -84,6 +86,16 @@ namespace thrive
             this.Close();
             LoginForm lg = new LoginForm();
             lg.Show();
+        }
+
+        private void DashFr_Load(object sender, EventArgs e)
+        {
+            User us = new User();
+            us.Logout();
+            this.Close();
+            LoginForm lg = new LoginForm();
+            lg.Show();
+
         }
     }
 }

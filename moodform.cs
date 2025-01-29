@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,8 +61,19 @@ namespace thrive
 
         private void MoodHisBut_Click(object sender, EventArgs e)
         {
-            MoodHistory mh = new MoodHistory();
-            mh.Show();
+            int UserId = User.UserId;
+            string connectionString = "server=localhost;database=thrive;user=root;password=123;";
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT MoodScore FROM  moodtracker WHERE UserId = @UserId", conn);
+            cmd.Parameters.AddWithValue("@UserId", UserId);
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+
         }
 
         private void MoodForm_Load(object sender, EventArgs e)
@@ -70,6 +82,11 @@ namespace thrive
         }
 
         private void MoodPnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

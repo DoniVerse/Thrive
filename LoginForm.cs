@@ -98,6 +98,7 @@ namespace thrive
         private void RegLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RegForm rg = new RegForm();
+            rg.FormClosed += (s, args) => this.Show();
             rg.Show();
             this.Hide();
         }

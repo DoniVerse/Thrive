@@ -31,16 +31,19 @@
             NoteTxtBx = new TextBox();
             SaveBut = new Button();
             BackJourBut = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // NoteTxtBx
             // 
             NoteTxtBx.Dock = DockStyle.Top;
             NoteTxtBx.Location = new Point(0, 0);
+            NoteTxtBx.Margin = new Padding(4, 5, 4, 5);
             NoteTxtBx.Multiline = true;
             NoteTxtBx.Name = "NoteTxtBx";
             NoteTxtBx.PlaceholderText = "My Journal";
-            NoteTxtBx.Size = new Size(800, 368);
+            NoteTxtBx.Size = new Size(1143, 422);
             NoteTxtBx.TabIndex = 0;
             NoteTxtBx.TextChanged += NoteTxtBx_TextChanged;
             // 
@@ -50,9 +53,10 @@
             SaveBut.FlatStyle = FlatStyle.Flat;
             SaveBut.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SaveBut.ForeColor = Color.Transparent;
-            SaveBut.Location = new Point(102, 386);
+            SaveBut.Location = new Point(53, 442);
+            SaveBut.Margin = new Padding(4, 5, 4, 5);
             SaveBut.Name = "SaveBut";
-            SaveBut.Size = new Size(75, 40);
+            SaveBut.Size = new Size(107, 67);
             SaveBut.TabIndex = 1;
             SaveBut.Text = "Save";
             SaveBut.UseVisualStyleBackColor = false;
@@ -64,26 +68,40 @@
             BackJourBut.FlatStyle = FlatStyle.Flat;
             BackJourBut.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BackJourBut.ForeColor = Color.Transparent;
-            BackJourBut.Location = new Point(275, 386);
+            BackJourBut.Location = new Point(275, 442);
+            BackJourBut.Margin = new Padding(4, 5, 4, 5);
             BackJourBut.Name = "BackJourBut";
-            BackJourBut.Size = new Size(132, 40);
+            BackJourBut.Size = new Size(189, 67);
             BackJourBut.TabIndex = 2;
             BackJourBut.Text = "Your Journal";
             BackJourBut.UseVisualStyleBackColor = false;
             BackJourBut.Click += BackJourBut_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.ActiveCaption;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(0, 517);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(1131, 225);
+            dataGridView1.TabIndex = 3;
+            // 
             // NotePad
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
+            Controls.Add(dataGridView1);
             Controls.Add(BackJourBut);
             Controls.Add(SaveBut);
             Controls.Add(NoteTxtBx);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "NotePad";
             Text = "NotePad";
             Load += NotePad_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -93,5 +111,6 @@
         private TextBox NoteTxtBx;
         private Button SaveBut;
         private Button BackJourBut;
+        private DataGridView dataGridView1;
     }
 }

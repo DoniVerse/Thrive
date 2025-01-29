@@ -16,7 +16,7 @@ namespace thrive
         public string? MoodScore { get; set; } 
         public DateTime Date { get; set; }
 
-        private string connectionString = "server=localhost;database=Thrive;user=root;password=;";
+        private string connectionString = "server=localhost;database=thrive;user=root;password=123;";
 
         // Method to log a mood
         public bool LogMood(int userId, string moodScore, DateTime date)
@@ -52,10 +52,10 @@ namespace thrive
             }
         }
 
-        // Method to get mood history
+        //Method to get mood history
         public DataTable GetMoodHistory(int userId)
         {
-         
+
             DataTable MHT = new DataTable();
 
             try
@@ -81,6 +81,6 @@ namespace thrive
 
             return MHT;
         }
-    
-}
+
+    }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,9 +61,19 @@ namespace thrive
 
         private void BackJourBut_Click(object sender, EventArgs e)
         {
-            JourFr jr = new JourFr();
-            this.Close();
-            jr.Show();
+            int UserJournalId = User.UserId; 
+            string connectionString = "server=localhost;database=thrive;user=root;password=123;";
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT cotent FROM  journal WHERE UserJournal_Id = @UserJournal_Id", conn);
+            cmd.Parameters.AddWithValue("@UserJournal_Id", UserJournalId);
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+
         }
 
         private void NoteTxtBx_TextChanged(object sender, EventArgs e)
@@ -72,6 +83,8 @@ namespace thrive
 
         private void NotePad_Load(object sender, EventArgs e)
         {
+
+          
 
         }
     }
