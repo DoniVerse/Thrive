@@ -61,11 +61,11 @@ namespace thrive
                     Email = email,
                     Password = password
                 };
-
-                // Attempt registration
+               
                 if (usr.Register())
                 {
                     MessageBox.Show("Registered successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
                     this.Close();
 
 

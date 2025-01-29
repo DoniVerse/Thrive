@@ -99,7 +99,7 @@ namespace thrive
         {
             RegForm rg = new RegForm();
             rg.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }

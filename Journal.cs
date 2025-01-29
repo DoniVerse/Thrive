@@ -31,9 +31,7 @@ namespace thrive
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ClassJournal cj = new ClassJournal();
-            JournalDtaGrid.DataSource = cj.ViewEntries();
-            JournalDtaGrid.AutoGenerateColumns = true;
+           
         }
 
         private void AddBut_Click(object sender, EventArgs e)
@@ -42,10 +40,23 @@ namespace thrive
             note.Show();
             this.Close();
         }
-            private void DelBut_Click(object sender, EventArgs e)
-            {
+        private void DelBut_Click(object sender, EventArgs e)
+        {
 
-            }
+        }
+
+        private void Journal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            ClassJournal cj = new ClassJournal();
+            journalGrid.DataSource = cj.ViewEntries();
+            journalGrid.AutoGenerateColumns = true;
+
         }
     }
+}
 

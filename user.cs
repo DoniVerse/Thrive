@@ -70,6 +70,7 @@ namespace thrive
 
                         insertCommand.ExecuteNonQuery(); // Execute the command
                         UserId = (int)insertCommand.LastInsertedId; // Get the inserted ID
+                        MessageBox.Show("your user id is " + UserId, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     return true; // Registration successful

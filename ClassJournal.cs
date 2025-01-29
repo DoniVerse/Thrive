@@ -68,9 +68,9 @@ namespace thrive
         }
         public List<ClassJournal> ViewEntries()
         {
-            List<ClassJournal> entries = new List<ClassJournal>();
-            UserJournalId = User.UserId;
+            List<ClassJournal> entries = new List<ClassJournal>(); // List to hold journal entries
             DataTable DT = new DataTable();
+            int UserJournalId = User.UserId; // Get logged-in user's ID
 
             try
             {
@@ -78,18 +78,25 @@ namespace thrive
                 {
                     connection.Open();
 
-                    string query = "SELECT Cotent FROM journal WHERE UserJournal_Id = @UserJournal_Id";
+                    string query = "SELECT Content FROM journal WHERE UserJournal_Id = @UserJournal_Id";
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@UserJournal_Id", UserJournalId);
-                        MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
 
-                        // Fill the DataTable with the result set
-                        adapter.Fill(DT);
-                        //foreach (DataRow row in DT.Rows)
-                        //{
-                        //    entries.Add(row["Cotent"]);
-                        //}
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd)) // Correct usage of DataAdapter
+                        {
+                            adapter.Fill(DT); // Fill DataTable with query results
+                        }
+
+                        // Loop through DataTable and convert each row into a ClassJournal object
+                        foreach (DataRow row in DT.Rows)
+                        {
+                            ClassJournal entry = new ClassJournal
+                            {
+                                Content = row["Content"].ToString() // Assign the journal entry content
+                            };
+                            entries.Add(entry);
+                        }
                     }
                 }
             }
@@ -98,37 +105,10 @@ namespace thrive
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            return entries;
-
-
-            //public bool DeleteEntry(int entryId)
-            //{
-            //    try
-            //    {
-            //        using (MySqlConnection connection = new MySqlConnection(connectionString))
-            //        {
-            //            connection.Open();
-
-            //            string query = "DELETE FROM Journal WHERE EntryId = @EntryId";
-            //            using (MySqlCommand cmd = new MySqlCommand(query, connection))
-            //            {
-            //                cmd.Parameters.AddWithValue("@EntryId", entryId);
-            //                cmd.ExecuteNonQuery();
-            //            }
-
-            //            MessageBox.Show("Journal entry deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            return true;
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        return false;
-            //    }
-            //}
-        
+            return entries; // Return list of journal entries
         }
+
     }
-    }
+}
 
 
