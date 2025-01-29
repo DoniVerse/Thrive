@@ -30,6 +30,7 @@ namespace thrive
             Sound Sd = new Sound().PLaySound(SoundId);
             if (Sd != null)
             {
+
                 WatchFr playerForm = new WatchFr(Sd.SoundFile);
                 playerForm.Show();
             }

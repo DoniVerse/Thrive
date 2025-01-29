@@ -42,7 +42,7 @@ namespace thrive
             }
 
             // Concatenate selected moods into a single string
-            string moodScore = string.Join("you are feeling, ", selectedMoods);
+            string moodScore = string.Join("feeling: ", selectedMoods);
 
             // Get the date
             DateTime selectedDate = MoodDate.Value;
@@ -60,6 +60,7 @@ namespace thrive
 
         private void MoodHisBut_Click(object sender, EventArgs e)
         {
+          
             MoodHistory mh = new MoodHistory();
             mh.Show();
         }

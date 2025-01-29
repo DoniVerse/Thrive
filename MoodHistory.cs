@@ -46,9 +46,9 @@ namespace thrive
         private void MoodListView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            MoodTracker mt = new MoodTracker();
+            //MoodTracker mt = new MoodTracker();
             int id = User.UserId;
-            MoodListView.DataSource = mt.GetMoodHistory(id);
+            MoodListView.DataSource = new MoodTracker().GetMoodHistory(id);
             MoodListView.AutoGenerateColumns = true;
 
         }

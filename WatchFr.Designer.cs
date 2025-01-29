@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WatchFr));
             WatchMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
-            WatchFrBut = new Button();
             ((System.ComponentModel.ISupportInitialize)WatchMediaPlayer).BeginInit();
             SuspendLayout();
             // 
@@ -44,27 +43,12 @@
             WatchMediaPlayer.TabIndex = 0;
             WatchMediaPlayer.Enter += WatchMediaPlayer_Enter;
             // 
-            // WatchFrBut
-            // 
-            WatchFrBut.BackColor = SystemColors.Highlight;
-            WatchFrBut.FlatStyle = FlatStyle.Flat;
-            WatchFrBut.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            WatchFrBut.ForeColor = Color.Transparent;
-            WatchFrBut.Location = new Point(21, 26);
-            WatchFrBut.Name = "WatchFrBut";
-            WatchFrBut.Size = new Size(75, 32);
-            WatchFrBut.TabIndex = 1;
-            WatchFrBut.Text = "Back";
-            WatchFrBut.UseVisualStyleBackColor = false;
-            WatchFrBut.Click += WatchFrBut_Click;
-            // 
             // WatchFr
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
-            Controls.Add(WatchFrBut);
             Controls.Add(WatchMediaPlayer);
             Name = "WatchFr";
             Text = "WatchFr";
@@ -76,6 +60,5 @@
         #endregion
 
         private AxWMPLib.AxWindowsMediaPlayer WatchMediaPlayer;
-        private Button WatchFrBut;
     }
 }
