@@ -6,6 +6,7 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace thrive
 {
@@ -14,7 +15,7 @@ namespace thrive
         public int EntryId { get; set; }
         public int UserJournalId { get; set; }
         public string? Content { get; set; }
-        private string connectionString = "server=localhost;database=Thrive;user=root;password=;";
+        private string connectionString = "server=localhost;database=thrive;user=root;password=123;";
         public ClassJournal() { }
         public ClassJournal(int JournalId, int CureentUserId, string content)
         {
@@ -68,33 +69,42 @@ namespace thrive
         }
         public DataTable ViewEntries()
         {
-            DataTable DT = new DataTable();
-            int UserJournalId = User.UserId; 
+            //DataTable DT = new DataTable();
+            //int UserJournalId = User.UserId; 
 
-            try
-            {
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
-                {
-                    connection.Open();
+            //try
+            //{
+            //    using (MySqlConnection connection = new MySqlConnection(connectionString))
+            //    {
+            //        connection.Open();
 
-                    string query = "SELECT Cotent FROM journal WHERE UserJournal_Id = @UserJournal_Id";
-                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
-                    {
-                        cmd.Parameters.AddWithValue("@UserJournal_Id", UserJournalId);
+            //        string query = "SELECT Cotent FROM journal WHERE UserJournal_Id = @UserJournal_Id";
+            //        using (MySqlCommand cmd = new MySqlCommand(query, connection))
+            //        {
+            //            cmd.Parameters.AddWithValue("@UserJournal_Id", UserJournalId);
 
-                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd)) 
-                        {
-                            adapter.Fill(DT); // Fill DataTable with query results
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //            using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd)) 
+            //            {
+            //                adapter.Fill(DT); // Fill DataTable with query results
+            //            }
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            string connectionString = "server=localhost;database=thrive;user=root;password=123;";
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT cotent FROM  journal ", conn);
 
-            return DT;
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+          
+            return dt;
         }
 
 

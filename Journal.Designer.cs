@@ -35,20 +35,23 @@
             // journalGrid
             // 
             journalGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            journalGrid.Location = new Point(25, 25);
+            journalGrid.Location = new Point(36, 42);
+            journalGrid.Margin = new Padding(4, 5, 4, 5);
             journalGrid.Name = "journalGrid";
-            journalGrid.Size = new Size(742, 390);
+            journalGrid.RowHeadersWidth = 62;
+            journalGrid.Size = new Size(1060, 650);
             journalGrid.TabIndex = 0;
             journalGrid.CellContentClick += dataGridView1_CellContentClick_1;
             // 
             // Journal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(journalGrid);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Journal";
             Text = "Journal";
             Load += Journal_Load;
