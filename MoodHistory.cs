@@ -13,13 +13,13 @@ namespace thrive
 {
     public partial class MoodHistory : Form
     {
-        MoodTracker mT = new MoodTracker();
-        private int userIdentifier;
+        //MoodTracker mT = new MoodTracker();
+        //private int userIdentifier;
         public MoodHistory()
         {
             InitializeComponent();
-            this.userIdentifier = mT.UserId;
-            LoadMoodHistory();
+            //this.userIdentifier = mT.UserId;
+            //LoadMoodHistory();
         }
         //private void InitializeListView()
         //{

@@ -62,10 +62,10 @@ namespace thrive
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
-                    connection.Open();
+                    //connection.Open();
 
                     // Retrieve mood history for the user
-                    string selectQuery = "SELECT * FROM moodtracker WHERE UserId = @UserId ORDER BY Date DESC";
+                    string selectQuery = "SELECT * FROM moodtracker WHERE UserId = @UserId ORDER BY Date DESC ";
 
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection))
                     {

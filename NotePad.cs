@@ -60,9 +60,9 @@ namespace thrive
 
         private void BackJourBut_Click(object sender, EventArgs e)
         {
-            //Journal jr = new Journal();
-            //this.Close();
-            //jr.Show();
+            JourFr jr = new JourFr();
+            this.Close();
+            jr.Show();
         }
 
         private void NoteTxtBx_TextChanged(object sender, EventArgs e)

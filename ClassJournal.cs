@@ -66,11 +66,10 @@ namespace thrive
                 return false;
             }
         }
-        public List<ClassJournal> ViewEntries()
+        public DataTable ViewEntries()
         {
-            List<ClassJournal> entries = new List<ClassJournal>(); // List to hold journal entries
             DataTable DT = new DataTable();
-            int UserJournalId = User.UserId; // Get logged-in user's ID
+            int UserJournalId = User.UserId; 
 
             try
             {
@@ -78,24 +77,14 @@ namespace thrive
                 {
                     connection.Open();
 
-                    string query = "SELECT Content FROM journal WHERE UserJournal_Id = @UserJournal_Id";
+                    string query = "SELECT Cotent FROM journal WHERE UserJournal_Id = @UserJournal_Id";
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@UserJournal_Id", UserJournalId);
 
-                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd)) // Correct usage of DataAdapter
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd)) 
                         {
                             adapter.Fill(DT); // Fill DataTable with query results
-                        }
-
-                        // Loop through DataTable and convert each row into a ClassJournal object
-                        foreach (DataRow row in DT.Rows)
-                        {
-                            ClassJournal entry = new ClassJournal
-                            {
-                                Content = row["Content"].ToString() // Assign the journal entry content
-                            };
-                            entries.Add(entry);
                         }
                     }
                 }
@@ -105,8 +94,9 @@ namespace thrive
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            return entries; // Return list of journal entries
+            return DT;
         }
+
 
     }
 }
