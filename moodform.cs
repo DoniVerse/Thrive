@@ -62,22 +62,10 @@ namespace thrive
         private void MoodHisBut_Click(object sender, EventArgs e)
         {
 
-          
-            MoodHistory mh = new MoodHistory();
-            mh.Show();
 
-            int UserId = User.UserId;
-            string connectionString = "server=localhost;database=thrive;user=root;password=123;";
-            MySqlConnection conn = new MySqlConnection(connectionString);
-            conn.Open();
-            MySqlCommand cmd = new MySqlCommand("SELECT MoodScore FROM  moodtracker WHERE UserId = @UserId", conn);
-            cmd.Parameters.AddWithValue("@UserId", UserId);
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            dataGridView1.DataSource = dt;
+            MoodTracker mt = new MoodTracker();
+            int id = User.UserId;
+            dataGridView1.DataSource = mt.GetMoodHistory(id);
 
 
         }
@@ -93,6 +81,11 @@ namespace thrive
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void AnxiPicBx_Click(object sender, EventArgs e)
         {
 
         }

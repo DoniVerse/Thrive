@@ -11,7 +11,7 @@ namespace thrive
     {
         public int ExerciseId { get; set; }
         public string ?Link { get; set; }
-        private string connectionString = "server=localhost;database=thrive;user=root;password=123;";
+        private string connectionString = "server=localhost;database=thrive;user=root;password=;";
 
         public Excerise GetExercise(int exerciseId)
         {

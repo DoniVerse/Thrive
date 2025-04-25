@@ -61,18 +61,9 @@ namespace thrive
 
         private void BackJourBut_Click(object sender, EventArgs e)
         {
-            int UserJournalId = User.UserId; 
-            string connectionString = "server=localhost;database=thrive;user=root;password=123;";
-            MySqlConnection conn = new MySqlConnection(connectionString);
-            conn.Open();
-            MySqlCommand cmd = new MySqlCommand("SELECT cotent FROM  journal WHERE UserJournal_Id = @UserJournal_Id", conn);
-            cmd.Parameters.AddWithValue("@UserJournal_Id", UserJournalId);
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            dataGridView1.DataSource = dt;
+           
+            ClassJournal cs = new ClassJournal();
+            dataGridView1.DataSource = cs.ViewEntries();
 
         }
 

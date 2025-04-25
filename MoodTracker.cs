@@ -16,7 +16,7 @@ namespace thrive
         public string? MoodScore { get; set; } 
         public DateTime Date { get; set; }
 
-        private string connectionString = "server=localhost;database=thrive;user=root;password=123;";
+        private string connectionString = "server=localhost;database=thrive;user=root;password=;";
 
         // Method to log a mood
         public bool LogMood(int userId, string moodScore, DateTime date)
@@ -55,7 +55,7 @@ namespace thrive
         //Method to get mood history
         public DataTable GetMoodHistory(int userId)
         {
-
+            userId= User.UserId;
             DataTable MHT = new DataTable();
 
             try
@@ -65,7 +65,7 @@ namespace thrive
                     //connection.Open();
 
                     // Retrieve mood history for the user
-                    string selectQuery = "SELECT * FROM moodtracker WHERE UserId = @UserId ORDER BY Date DESC ";
+                    string selectQuery = "SELECT MoodScore,Date FROM moodtracker WHERE UserId = @UserId ORDER BY Date DESC ";
 
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection))
                     {

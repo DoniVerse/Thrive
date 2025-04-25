@@ -14,7 +14,7 @@ namespace thrive
         public string? UserName { get; set; }
         public string? Email { get; set; }
         public string? Password { get; set; }
-        private string connectionString = "server=localhost;database=thrive;user=root;password=123;";
+        private string connectionString = "server=localhost;database=thrive;user=root;password=;";
         public static bool IsValidEmail(string email)
         {
             // Regex pattern to ensure email ends with @gmail.com
@@ -111,7 +111,7 @@ namespace thrive
                             }
                         }
 
-                        MessageBox.Show("Invalid email or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Invalid user id or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -129,9 +129,9 @@ namespace thrive
             {
                 // Clear user session data
                 User.UserId = 0;  // Reset UserId to indicate no user is logged in
-                //User.Password = null;  // Clear the password (if stored in memory)
+               
 
-                // Optionally, show a logout confirmation message
+          
                 MessageBox.Show("You have successfully logged out.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

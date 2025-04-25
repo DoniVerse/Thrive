@@ -90,11 +90,11 @@ namespace thrive
 
         private void DashFr_Load(object sender, EventArgs e)
         {
-            User us = new User();
-            us.Logout();
-            this.Close();
-            LoginForm lg = new LoginForm();
-            lg.Show();
+            //User us = new User();
+            //us.Logout();
+            //this.Close();
+            //LoginForm lg = new LoginForm();
+            //lg.Show();
 
         }
     }

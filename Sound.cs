@@ -11,7 +11,7 @@ namespace thrive
     {
         public int SoundId { get; set; }
         public string? SoundFile { get; set; }
-        private string connectionString = "server=localhost;database=thrive;user=root;password=123;";
+        private string connectionString = "server=localhost;database=thrive;user=root;password=;";
 
         public Sound PLaySound(int SoundId)
         {
